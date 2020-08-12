@@ -1,2 +1,1 @@
-# dotfiles
-Dotfiles for macOS setup
+see https://github.com/aaronbates/dotfiles
