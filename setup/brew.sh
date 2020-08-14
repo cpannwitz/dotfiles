@@ -73,7 +73,6 @@ if $brewinstall; then
   brew install pyenv-virtualenv
   brew install kubernetes-cli
 
-
   # DATABASES
   brew install postgresql
   brew install mongodb
@@ -82,9 +81,6 @@ if $brewinstall; then
 
   # DEVOPS
   brew install heroku
-  # brew install docker -> see dl-manual.md
-  # brew install docker-compose
-  # brew install docker-machine
   brew install watchman
   brew install cocoapods
   brew install deno
@@ -128,14 +124,11 @@ if $brewinstall; then
   brew cask install google-chrome
   brew cask install firefox-developer-edition
   brew cask install iterm2
-  brew cask install oversight
   brew cask install slack
   brew cask install slite
   brew cask install notion
-  brew cask install spectacle
   brew cask install spotify
-  brew cask install vlc
-  brew cask install zoomus
+  brew cask install skype
 
   # Design
   brew cask install figma
@@ -152,6 +145,7 @@ if $brewinstall; then
   brew cask install cyberduck
   brew cask install gitkraken
   brew cask install imageoptim
+  brew cask install sublime-text
   brew cask install visual-studio-code
   brew cask install visual-studio-code-insiders
 
@@ -160,10 +154,12 @@ if $brewinstall; then
   brew cask install qlstephen
   brew cask install qlmarkdown
   brew cask install quicklook-json
-  brew cask install qlprettypatch
   brew cask install quicklook-csv
-  brew cask install webpquicklook
+  brew cask install qlimagesize
+  brew cask install suspicious-package
+  brew cask install quicklookase
   brew cask install qlvideo
+  brew cask install webpquicklook
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas

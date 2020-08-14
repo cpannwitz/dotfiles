@@ -5,7 +5,6 @@
 - Fill in: ~/dotfiles/iterm2 -> com.googlecode.iterm2.plist
 - Restart iTerm2.
 
-
 # Download Apps
 Docker https://docs.docker.com/docker-for-mac/install/
 Affinity Designer https://store.serif.com/download/aa4dee/

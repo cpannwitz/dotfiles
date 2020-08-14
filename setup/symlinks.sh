@@ -45,13 +45,13 @@ for i in "${dotfilesfilearray[@]}"; do
   done;
 done;
 
-# Custom symlinks.
-action "Creating custom symlinks."
-# git-friendly symlinks
-process_symlinks "$dotfilesdir/bin/git-friendly/branch" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
-process_symlinks "$dotfilesdir/bin/git-friendly/merge" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
-process_symlinks "$dotfilesdir/bin/git-friendly/pull" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
-process_symlinks "$dotfilesdir/bin/git-friendly/push" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
+# # Custom symlinks.
+# action "Creating custom symlinks."
+# # git-friendly symlinks
+# process_symlinks "$dotfilesdir/bin/git-friendly/branch" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
+# process_symlinks "$dotfilesdir/bin/git-friendly/merge" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
+# process_symlinks "$dotfilesdir/bin/git-friendly/pull" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
+# process_symlinks "$dotfilesdir/bin/git-friendly/push" "$dotfilesdir/bin/git-friendly" "$dotfilesdir/bin"
 
 # If files are not stored in ~/dotfiles then symlink to that folder
 # note: if ~/dotfiles does exist or links elsewhere it only breaks

@@ -15,12 +15,15 @@ action "Setting chmod for ~/.ssh"
 chmod 700 "$HOME/.ssh"
 print_result $? "Set chmod 700 on ~/.ssh"
 
-action "Setting chmod for ~/.gnupg"
-mkdir "$HOME/.gnupg"
-chmod 700 "$HOME/.gnupg"
+action "Install packages for SublimeText3"
+curl -L https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package --create-dirs
+mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+cp -Rp ../sublimetext3/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
-# Install Theme for iTerm2
-action "Installing Theme for iTerm2"
-open "${dotfilesdir}/iterm2/palenight.itermcolors"
+
+# # Install Theme for iTerm2
+# action "Installing Theme for iTerm2"
+# open "${dotfilesdir}/iterm2/palenight.itermcolors"
 
 success "Final touches in place."

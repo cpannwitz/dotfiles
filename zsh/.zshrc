@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Path to flutter configuration
 export PATH="$PATH:~/flutter/bin"
@@ -143,8 +143,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
+# alias python=/usr/local/bin/python3
+# alias pip=/usr/local/bin/pip3
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 DISABLE_MAGIC_FUNCTIONS=true
@@ -172,4 +172,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
