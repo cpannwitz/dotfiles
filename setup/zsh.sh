@@ -12,6 +12,7 @@ curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 source ./install.sh
 
 action "Installing Spaceship Prompt"
+mkdir -p $ZSH_CUSTOM/themes/spaceship-prompt
 # Git cloning the repository into the ZSH themes folder
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 # Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory:

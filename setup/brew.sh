@@ -113,6 +113,7 @@ if $brewinstall; then
   # General
   brew cask install 1password
   brew cask install toggl
+  brew cask install kap
   brew cask install spotmenu
   brew cask install pdf-expert
   brew cask install karabiner-elements
