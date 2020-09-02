@@ -6,12 +6,36 @@
 - Restart iTerm2.
 
 # Download Apps
-Docker https://docs.docker.com/docker-for-mac/install/
-Affinity Designer https://store.serif.com/download/aa4dee/
-Affinity Photo https://store.serif.com/download/075b51/
-GOTO for credentials: https://store.serif.com/de/account/
+## Docker
+Because Docker comes with plenty of stuff, which makes manual installation cumbersome
+```
+https://docs.docker.com/docker-for-mac/install/
+```
+## Affinity Suite
+### Affinity Designer
+```
+https://store.serif.com/download/aa4dee/
+```
+### Affinity Photo
+```
+https://store.serif.com/download/075b51/
+```
+### Credentials
+```
+https://store.serif.com/de/account/
+```
 
-Boom3d https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg
-GOTO for credentials: https://www.globaldelight.com/boom/
+## Boom3D
+### Download
+```
+https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg
+```
+### Credentials
+```
+https://www.globaldelight.com/boom/
+```
 
-Macs Fan Control: https://crystalidea.com/downloads/macsfancontrol.zip
+## Macs Fan Control
+```
+https://crystalidea.com/downloads/macsfancontrol.zip
+```
