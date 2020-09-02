@@ -24,8 +24,8 @@ Example ~/.gitconfig.local file:
 ```
 
 # Prepare MacOS Defaults
+Set computer name (as done via System Preferences → Sharing)
 ```
-# Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "EXAMPLENAME"
 sudo scutil --set HostName "EXAMPLENAME"
 sudo scutil --set LocalHostName "EXAMPLENAME"
