@@ -25,11 +25,10 @@ nvm alias default node
 
 # NPM
 # Upgrade all global NPM packages
-# WARNING: this needs to be run multiple times
-# Apparently NPM doesn't really get all the outdated stuff at once
+npm install npm -g
 npm update -g
-npm update -g
-npm update -g
+npm cache clean
+
 
 # Apple Store (via brew/mas)
 mas upgrade
