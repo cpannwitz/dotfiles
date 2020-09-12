@@ -143,14 +143,15 @@ alias hosts='sudo $EDITOR /etc/hosts'
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias updatesystem='~/dotfiles/update.sh'
 alias update='\
-  sudo softwareupdate -i -a; \
   brew update; \
   brew upgrade; \
   brew cleanup; \
   npm install npm -g; \
   npm update -g; \
   npm cache clean; \
+  sudo softwareupdate -i -a; \
 '
 
 # Google Chrome
