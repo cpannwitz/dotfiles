@@ -143,7 +143,7 @@ alias hosts='sudo $EDITOR /etc/hosts'
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias updatesystem='~/dotfiles/update.sh'
+alias updatesystem="$HOME/dotfiles/update.sh"
 alias update='\
   brew update; \
   brew upgrade; \
