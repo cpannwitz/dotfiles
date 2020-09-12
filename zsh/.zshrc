@@ -5,7 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Path to flutter configuration
-export PATH="$PATH:~/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
