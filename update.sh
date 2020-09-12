@@ -27,7 +27,7 @@ nvm alias default node
 # Upgrade all global NPM packages
 npm install npm -g
 npm update -g
-npm cache clean
+npm cache verify
 
 
 # Apple Store (via brew/mas)

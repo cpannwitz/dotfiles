@@ -150,7 +150,7 @@ alias update='\
   brew cleanup; \
   npm install npm -g; \
   npm update -g; \
-  npm cache clean; \
+  npm cache verify; \
   sudo softwareupdate -i -a; \
 '
 
