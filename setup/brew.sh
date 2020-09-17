@@ -72,6 +72,7 @@ if $brewinstall; then
   brew install pyenv
   brew install pyenv-virtualenv
   brew install kubernetes-cli
+  brew install gh
 
   # DATABASES
   brew install postgresql
