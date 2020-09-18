@@ -141,6 +141,7 @@ if $brewinstall; then
   brew cask install tunnelblick
   brew cask install termius
   brew cask install pgadmin4
+  brew cask install dbeaver-community
   brew cask install insomnia
   brew cask install insomnia-designer
   brew cask install graphql-playground
