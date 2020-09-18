@@ -137,6 +137,7 @@ if $brewinstall; then
   brew cask install framer
 
   # Development
+  brew cask install adoptopenjdk
   brew cask install android-studio
   brew cask install tunnelblick
   brew cask install termius
