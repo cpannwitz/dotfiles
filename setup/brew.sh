@@ -148,6 +148,7 @@ if $brewinstall; then
   brew cask install graphql-playground
   brew cask install cyberduck
   brew cask install gitkraken
+  brew cask install kitematic
   brew cask install imageoptim
   brew cask install sublime-text
   brew cask install visual-studio-code
