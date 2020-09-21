@@ -56,8 +56,8 @@ if $brewinstall; then
   brew install zsh-completion
   brew install zsh-autosuggestions
 
-  # Install `wget` with IRI support.
-  brew install wget --with-iri
+  # Install `wget`
+  brew install wget
 
   # Install more recent versions of some native macOS tools.
   brew install nano
@@ -67,7 +67,6 @@ if $brewinstall; then
   brew install brew-cask-completion
   brew install terminal-notifier
   brew install wifi-password
-  brew install keka
   brew install mas
   brew install pyenv
   brew install pyenv-virtualenv
@@ -76,11 +75,13 @@ if $brewinstall; then
 
   # DATABASES
   brew install postgresql
-  brew install mongodb
+  brew tap mongodb/brew
+  brew install mongodb-community
   brew install mysql
   brew install redis
 
   # DEVOPS
+  brew tap heroku/brew
   brew install heroku
   brew install watchman
   brew install cocoapods
@@ -90,7 +91,7 @@ if $brewinstall; then
   # FONTS
   running "Installing fonts"
 
-  brew tap caskroom/fonts
+  brew tap homebrew/cask-fonts
 
   brew cask install font-droid-sans
   brew cask install font-droid-sans-mono
@@ -108,12 +109,12 @@ if $brewinstall; then
   running "Installing cask apps"
 
   # APPLICATIONS
-  brew tap caskroom/cask
-  brew tap caskroom/versions
+  brew tap homebrew/cask-versions
 
   # General
+  brew cask install keka
   brew cask install 1password
-  brew cask install toggl
+  brew cask install toggl-track
   brew cask install kap
   brew cask install spotmenu
   brew cask install pdf-expert

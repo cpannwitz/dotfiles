@@ -30,17 +30,17 @@ dotfilesdir=$(pwd)
 # git pull origin master # pull repo.
 #fi;
 
-warn "\e[1mEnsure your mac system is fully up-to-date and only\e[0m"
-warn "\e[1mrun this script in terminal.app (NOT in iTerm)\e[0m"
-warn "=> \e[1mCTRL+C now to abort\e[0m or \e[1mENTER\e[0m to continue."
+warn "Ensure your mac system is fully up-to-date and only"
+warn "run this script in terminal.app (NOT in iTerm)"
+warn "=> CTRL+C now to abort or ENTER to continue."
 tput bel
 read -n 1
 
 # Introduction
 awesome_header
 
-botintro "This script sets up new machines, \e[1m*use with caution*\e[0m. For more information, please see [https://github.com/cpannwitz/dotfiles]."
-echo -e "\nPress \e[1mENTER\e[0m to continue."
+botintro "This script sets up new machines, use with caution. For more information, please see [https://github.com/cpannwitz/dotfiles]."
+echo -e "\nPress ENTER to continue."
 read -n 1
 
 bot "OK, what we're going to do:\n"
@@ -89,10 +89,10 @@ botintro "\e[1mSTEP 2: DIRECTORIES\e[0m"
 source ./setup/directories.sh
 
 # ------------
-# 3. Xcode CLI
+# 3. Xcode CLI (INSTALLATION IS NOT FAIL SAFE, DL MANUALLY)
 # ------------
-botintro "\e[1mSTEP 3: XCODE CLI\e[0m"
-source ./setup/xcodecli.sh
+# botintro "\e[1mSTEP 3: XCODE CLI\e[0m"
+# source ./setup/xcodecli.sh
 
 # -----------
 # 4. Homebrew
@@ -125,16 +125,12 @@ source ./setup/symlinks.sh
 # --------
 # 8. Misc.
 # --------
-botintro "\e[1mSTEP 6: Final touches\e[0m"
+botintro "STEP 6: Final touches"
 source ./setup/misc.sh
 source ./setup/fonts.sh
 cd ~/dotfiles/macos && ./.macos
 
 # Wrap-up.
 
-botintro "\e[1mFINISHED\e[0m -- That's it for the automated process."
-bot "If you want to do more, take a look at the Going Further section:"
-bot "https://github.com/aaronbates/dotfiles#going-further"
-
-echo -e "\np.s. don't forget to sync your dropbox.\n"
+botintro "FINISHED --"
 # EOF

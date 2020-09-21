@@ -1,3 +1,10 @@
+# Prepare XCode Installation
+Login to https://developer.apple.com/downloads
+
+Download the "Command Line Tools for Xcode" appropriate for your version of OSX
+
+# Prepare the  System Integrity Protection
+
 # Prepare .gitconfig
 Customising Git
 Customise your Git config by creating a ~/.gitconfig.local file which will extend .gitconfig. Use this to store private details such as your user credentials and signing key.
