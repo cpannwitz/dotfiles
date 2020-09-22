@@ -10,11 +10,11 @@ botintro "Installing Oh-My-ZSH"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 action "Installing Spaceship Prompt"
-mkdir -p $ZSH_CUSTOM/themes/spaceship-prompt
+mkdir -p ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/themes/spaceship-prompt
 # Git cloning the repository into the ZSH themes folder
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+git clone https://github.com/denysdovhan/spaceship-prompt.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/themes/spaceship-prompt
 # Symlink spaceship.zsh-theme to your oh-my-zsh custom themes directory:
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln -s "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme" "${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
 # Set ZSH_THEME="spaceship" in your .zshrc (already done by preset .zshrc)
 
 action "Make iTerm2 ZSH shell integration"

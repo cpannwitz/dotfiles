@@ -21,6 +21,8 @@ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 cp -Rp ../sublimetext3/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
+action "Check for permission issues:"
+compaudit | xargs chmod g-w,o-w
 
 # Install Theme for iTerm2
 action "Installing Theme for iTerm2"
