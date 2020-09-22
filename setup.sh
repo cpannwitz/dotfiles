@@ -128,7 +128,7 @@ source ./setup/symlinks.sh
 botintro "STEP 6: Final touches"
 source ./setup/misc.sh
 source ./setup/fonts.sh
-cd ~/dotfiles/macos && ./.macos
+# cd ~/dotfiles/macos && ./.macos
 
 # Wrap-up.
 
