@@ -13,5 +13,5 @@ fonts=(
   )
 
   for font in ${fonts[@]}; do
-    cp -vf ../fonts/$font ~/Library/Fonts
+    cp -vf ~/dotfiles/fonts/$font ~/Library/Fonts
   done

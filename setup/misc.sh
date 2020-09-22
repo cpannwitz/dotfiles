@@ -19,7 +19,7 @@ action "Install packages for SublimeText3"
 curl -L https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package --create-dirs
 mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
 mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-cp -Rp ../sublimetext3/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+cp -Rp ~/dotfiles/sublimetext3/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
 action "Check for permission issues:"
 compaudit | xargs chmod g-w,o-w
