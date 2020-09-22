@@ -50,6 +50,7 @@ if $brewinstall; then
 
   # Key tools.
   brew install git
+  brew install svn
 
   # zsh
   brew install zsh
@@ -86,15 +87,12 @@ if $brewinstall; then
   brew install watchman
   brew install cocoapods
   brew install deno
-  brew install android-sdk
 
   # FONTS
   running "Installing fonts"
 
   brew tap homebrew/cask-fonts
 
-  brew cask install font-droid-sans
-  brew cask install font-droid-sans-mono
   brew cask install font-fira-code
   brew cask install font-fira-sans
   brew cask install font-fontawesome
@@ -139,6 +137,7 @@ if $brewinstall; then
 
   # Development
   brew cask install adoptopenjdk
+  brew cask install android-sdk
   brew cask install android-studio
   brew cask install tunnelblick
   brew cask install termius

@@ -8,12 +8,11 @@
 # Prep
 # 1. Backup
 # 2. Directories
-# 3. Xcode CLI
-# 4. Homebrew
-# 5. ZSH
-# 6. Node
-# 7. Symlinks
-# 8. Misc.
+# 3. Homebrew
+# 4. ZSH
+# 5. Node
+# 6. Symlinks
+# 7. Misc.
 
 debug=${1:-false} # default debug param.
 source ./setup/lib.sh # load help lib.
@@ -21,14 +20,9 @@ source ./setup/lib.sh # load help lib.
 # ----
 # Prep
 # ----
-echo -e "\n\e[1m\$HOME sweet /~\n\e[0m"
 
 defaultdotfilesdir="$HOME/dotfiles"
 dotfilesdir=$(pwd)
-
-#if is_git_repository; then
-# git pull origin master # pull repo.
-#fi;
 
 warn "Ensure your mac system is fully up-to-date and only"
 warn "run this script in terminal.app (NOT in iTerm)"
@@ -58,9 +52,9 @@ tput bel
 
 ask_for_confirmation "Ready?";
 if answer_is_yes; then
-  ok "\e[1mLet's go.\e[0m"
+  ok "Let's go."
 else
-  cancelled "\e[1mExit.\e[0m"
+  cancelled "Exit."
   exit -1;
 fi;
 
@@ -73,62 +67,58 @@ ask_for_sudo
 source ./setup/files.sh
 
 # Install all available macos updates.
-#action "Installing Mac updates:\n"
-#sudo softwareupdate -ia
+action "Installing Mac updates:\n"
+sudo softwareupdate -ia
 
 # ---------
 # 1. Backup
 # ---------
-botintro "\e[1mSTEP 2: BACKUP\e[0m"
+botintro "STEP 1: BACKUP"
 source ./setup/backup.sh
 
 # --------------
 # 2. Directories
 # --------------
-botintro "\e[1mSTEP 2: DIRECTORIES\e[0m"
+botintro "STEP 2: DIRECTORIES"
 source ./setup/directories.sh
 
-# ------------
-# 3. Xcode CLI (INSTALLATION IS NOT FAIL SAFE, DL MANUALLY)
-# ------------
-# botintro "\e[1mSTEP 3: XCODE CLI\e[0m"
-# source ./setup/xcodecli.sh
-
 # -----------
-# 4. Homebrew
+# 3. Homebrew
 # -----------
-botintro "\e[1mSTEP 4: HOMEBREW\e[0m"
+botintro "STEP 3: HOMEBREW"
 source ./setup/brew.sh
 
 # brew is required to continue, exit out otherwise.
 if ! $brewinstall;  then
-  cancelled "\e[1mCannot proceed. Exit.\e[0m"
+  cancelled "Cannot proceed. Exit."
   exit -1
 fi;
 
 # -----------
-# 5. ZSH
+# 4. ZSH
 # -----------
+botintro "STEP 4: SYMLINKS"
 source ./setup/zsh.sh
 
 # -----------
-# 6. Node
+# 5. Node
 # -----------
+botintro "STEP 5: SYMLINKS"
 source ./setup/node.sh
 
 # -----------
-# 7. Symlinks
+# 6. Symlinks
 # -----------
-botintro "\e[1mSTEP 5: SYMLINKS\e[0m"
+botintro "STEP 6: SYMLINKS"
 source ./setup/symlinks.sh
 
 # --------
-# 8. Misc.
+# 7. Misc.
 # --------
-botintro "STEP 6: Final touches"
+botintro "STEP 7: Final touches"
 source ./setup/misc.sh
 source ./setup/fonts.sh
-# cd ~/dotfiles/macos && ./.macos
+source ./setup/macos.sh
 
 # Wrap-up.
 

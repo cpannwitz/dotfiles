@@ -22,8 +22,8 @@ mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 cp -Rp ../sublimetext3/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 
 
-# # Install Theme for iTerm2
-# action "Installing Theme for iTerm2"
-# open "${dotfilesdir}/iterm2/palenight.itermcolors"
+# Install Theme for iTerm2
+action "Installing Theme for iTerm2"
+open "${dotfilesdir}/iterm2/palenight.itermcolors"
 
 success "Final touches in place."
