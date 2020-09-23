@@ -58,10 +58,12 @@ else
   exit -1;
 fi;
 
-#exit -1
-
 # Ask for the administrator password upfront.
 ask_for_sudo
+
+# Generate new SSH-Key
+action "Generating new SSH-Key:\n"
+ssh-keygen -t rsa
 
 # Source directories and files to handle.
 source ./setup/files.sh
