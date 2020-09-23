@@ -112,6 +112,9 @@ if $brewinstall; then
   # General
   brew cask install keka
   brew cask install 1password
+  brew cask install telegram
+  brew cask install whatsapp
+  brew cask install signal
   brew cask install toggl-track
   brew cask install kap
   brew cask install spotmenu
