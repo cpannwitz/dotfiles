@@ -1941,7 +1941,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>Recycle</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -2622,7 +2622,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>7C386D4C-9213-4643-97DD-4FD0275EDFBC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>14</integer>
+	<integer>15</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>622635148.66903901</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3445,7 +3445,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-22T10:23:16Z</date>
+	<date>2020-09-23T16:59:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
