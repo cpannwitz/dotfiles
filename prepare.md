@@ -1,9 +1,7 @@
-# Prepare XCode Installation
-Login to https://developer.apple.com/downloads
-
-Download the "Command Line Tools for Xcode" appropriate for your version of OSX
-
-# Prepare the  System Integrity Protection
+# Prepare the System Integrity Protection
+1. Restart MacOS, immediately press `CMD + R`
+2. In Terminal, write: `csrutil disable`
+3. Restart
 
 # Prepare .gitconfig
 Customising Git
@@ -24,10 +22,6 @@ Example ~/.gitconfig.local file:
 [credential]
 
   helper = osxkeychain
-
-[commit]
-
-  signingkey = YOUR-SIGNING-KEY-HERE
 ```
 
 # Prepare MacOS Defaults
