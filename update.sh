@@ -17,7 +17,7 @@ brew upgrade
 brew cleanup
 
 # HOMEBREW CASKS
-brew cask upgrade --greedy
+brew cask upgrade
 
 # NVM
 nvm install node --latest-npm --reinstall-packages-from=node
