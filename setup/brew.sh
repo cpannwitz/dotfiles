@@ -131,6 +131,7 @@ if $brewinstall; then
   brew cask install slack
   brew cask install slite
   brew cask install notion
+  brew cask install notable
   brew cask install spotify
   brew cask install skype
 
