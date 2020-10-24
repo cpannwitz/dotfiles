@@ -19,9 +19,17 @@ brew cleanup
 # HOMEBREW CASKS
 brew cask upgrade
 
+# We need NVM loading:
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 # NVM
-nvm install node --latest-npm --reinstall-packages-from=node
-nvm alias default node
+# Latest Node version
+# nvm install node --latest-npm --reinstall-packages-from=node
+# nvm alias default node
+# Node 14.x.x
+nvm install 14 --latest-npm --reinstall-packages-from=14
+nvm alias default 14
 
 # NPM
 # Upgrade all global NPM packages

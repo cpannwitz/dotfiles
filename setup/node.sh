@@ -15,12 +15,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Install latest Node version.
-action "Installing latest Node version"
-nvm install node
+# action "Installing latest Node version"
+# nvm install node
+# Install Node version 14 (LTS)
+action "Installing Node version 14 (LTS)"
+nvm install 14
 
 # Set default latest Node version.
-action "Setting default latest Node version"
-nvm alias default node
+# action "Setting default latest Node version"
+# nvm alias default node
+# Set default latest Node version.
+action "Setting default Node version 14 (LTS)"
+nvm alias default 14
 
 packages=(
   create-react-app
