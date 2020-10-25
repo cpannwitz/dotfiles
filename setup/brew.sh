@@ -134,6 +134,7 @@ if $brewinstall; then
   brew cask install notable
   brew cask install spotify
   brew cask install skype
+  brew cask install stats
 
   # Design
   brew cask install figma
