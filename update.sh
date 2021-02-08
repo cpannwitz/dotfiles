@@ -17,7 +17,7 @@ brew upgrade
 brew cleanup
 
 # HOMEBREW CASKS
-brew cask upgrade
+brew upgrade --cask
 
 # We need NVM loading:
 export NVM_DIR="$HOME/.nvm"
