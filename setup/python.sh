@@ -8,7 +8,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 source $HOME/.poetry/env
 
 poetry --version
-poetry config settings.virtualenvs.in-project true
+poetry config virtualenvs.in-project true
 
 # Create Oh-My-Zsh completions
 # see: https://python-poetry.org/docs/
