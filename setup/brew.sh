@@ -69,8 +69,10 @@ if $brewinstall; then
   brew install terminal-notifier
   brew install wifi-password
   brew install mas
+  # brew install python
   brew install pyenv
   brew install pyenv-virtualenv
+
   brew install kubernetes-cli
   brew install gh
 

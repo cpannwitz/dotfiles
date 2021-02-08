@@ -105,19 +105,25 @@ source ./setup/zsh.sh
 # -----------
 # 5. Node
 # -----------
-botintro "STEP 5: SYMLINKS"
+botintro "STEP 5: NODE"
 source ./setup/node.sh
 
 # -----------
-# 6. Symlinks
+# 6. Python
 # -----------
-botintro "STEP 6: SYMLINKS"
+botintro "STEP 6: PYTHON"
+source ./setup/python.sh
+
+# -----------
+# 7. Symlinks
+# -----------
+botintro "STEP 7: SYMLINKS"
 source ./setup/symlinks.sh
 
 # --------
-# 7. Misc.
+# 8. Misc.
 # --------
-botintro "STEP 7: Final touches"
+botintro "STEP 8: Final touches"
 source ./setup/misc.sh
 source ./setup/fonts.sh
 source ./setup/macos.sh

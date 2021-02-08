@@ -25,11 +25,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # NVM
 # Latest Node version
-# nvm install node --latest-npm --reinstall-packages-from=node
-# nvm alias default node
-# Node 14.x.x
-nvm install 14 --latest-npm --reinstall-packages-from=14
-nvm alias default 14
+nvm install node --latest-npm --reinstall-packages-from=node
+nvm alias default node
 
 # NPM
 # Upgrade all global NPM packages
@@ -42,4 +39,4 @@ npm cache verify
 mas upgrade
 
 # MacOS
-sudo softwareupdate -i -a --restart
+sudo softwareupdate -i -a

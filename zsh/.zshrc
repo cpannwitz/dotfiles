@@ -114,7 +114,7 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highlighting poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -173,3 +173,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Initialize pyenv, see: https://github.com/pyenv/pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$HOME/.poetry/bin:$PATH"
