@@ -56,6 +56,7 @@ if $brewinstall; then
   brew install zsh
   brew install zsh-completion
   brew install zsh-autosuggestions
+  brew install thefuck
 
   # Install `wget`
   brew install wget

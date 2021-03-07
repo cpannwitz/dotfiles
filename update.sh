@@ -24,9 +24,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # NVM
-# Latest Node version
-nvm install node --latest-npm --reinstall-packages-from=node
-nvm alias default node
+# # Install Node version 14 (LTS)
+nvm install 14 --reinstall-packages-from=node
+nvm alias default 14
 
 # NPM
 # Upgrade all global NPM packages
