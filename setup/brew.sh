@@ -166,6 +166,7 @@ if $brewinstall; then
   brew install --cask imageoptim
   brew install --cask visual-studio-code
   brew install --cask visual-studio-code-insiders
+  brew install --cask alt-tab
 
   # Quicklook
   brew install --cask qlcolorcode
