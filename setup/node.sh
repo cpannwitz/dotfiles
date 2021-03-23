@@ -30,23 +30,20 @@ nvm alias default 14
 
 packages=(
   create-react-app
+  create-next-app
   eslint
   gatsby-cli
   generator-code
   np
   npm
   tsdx
-  lighthouse
-  typeorm
   prettier
   netlify-cli
   firebase-tools
   expo-cli
   @nestjs/cli
   typescript
-  yo
   knex
-  jscodeshift
   yarn
 )
 

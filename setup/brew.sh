@@ -31,7 +31,7 @@ if $brewinstall; then
     # note: if your /usr/local is locked down (like at Google), you can do this to place everything in ~/.homebrew
     # mkdir "$HOME/.homebrew" && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
     # then add this to your path: export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     print_result $? 'Install Homebrew.'
   else
@@ -74,7 +74,9 @@ if $brewinstall; then
   brew install pyenv
   brew install pyenv-virtualenv
 
+  # Kubernetes
   brew install kubernetes-cli
+  # GITHUB CLI
   brew install gh
 
   # DATABASES
@@ -94,18 +96,24 @@ if $brewinstall; then
   # FONTS
   running "Installing fonts"
 
+  # MUST HAVE STEP to install fonts!
   brew tap homebrew/cask-fonts
 
-  brew cask install font-fira-code
-  brew cask install font-fira-sans
-  brew cask install font-fontawesome
-  brew cask install font-inconsolata
-  brew cask install font-lato
-  brew cask install font-open-sans
-  brew cask install font-roboto
-  brew cask install font-source-code-pro
-  brew cask install font-source-sans-pro
-  brew cask install font-ubuntu
+  brew install --cask font-fira-code
+  brew install --cask font-fira-sans
+  brew install --cask font-fontawesome
+  brew install --cask font-inconsolata
+  brew install --cask font-lato
+  brew install --cask font-open-sans
+  brew install --cask font-roboto
+  brew install --cask font-source-code-pro
+  brew install --cask font-source-sans-pro
+  brew install --cask font-ubuntu
+  brew install --cask font-cascadia-code
+  brew install --cask font-cascadia-code-pl
+  brew install --cask font-cascadia-mono
+  brew install --cask font-cascadia-mono-pl
+  brew install --cask font-victor-mono
 
   running "Installing cask apps"
 
@@ -113,70 +121,69 @@ if $brewinstall; then
   brew tap homebrew/cask-versions
 
   # General
-  brew cask install keka
-  brew cask install 1password
-  brew cask install telegram
-  brew cask install whatsapp
-  brew cask install signal
-  brew cask install toggl-track
-  brew cask install kap
-  brew cask install spotmenu
-  brew cask install pdf-expert
-  brew cask install karabiner-elements
-  brew cask install alfred
-  brew cask install appcleaner
-  brew cask install google-backup-and-sync
-  brew cask install signal
-  brew cask install discord
-  brew cask install google-chrome
-  brew cask install firefox-developer-edition
-  brew cask install iterm2
-  brew cask install slack
-  brew cask install slite
-  brew cask install notion
-  brew cask install notable
-  brew cask install spotify
-  brew cask install skype
-  brew cask install stats
+  brew install --cask keka
+  brew install --cask 1password
+  brew install --cask telegram
+  brew install --cask whatsapp
+  brew install --cask signal
+  brew install --cask discord
+  brew install --cask toggl-track
+  brew install --cask kap
+  brew install --cask spotmenu
+  # brew install --cask pdf-expert
+  brew install --cask karabiner-elements
+  brew install --cask alfred
+  brew install --cask appcleaner
+  brew install --cask google-backup-and-sync
+  brew install --cask google-chrome
+  brew install --cask firefox-developer-edition
+  brew install --cask iterm2
+  brew install --cask slack
+  brew install --cask notion
+  brew install --cask obsidian
+  brew install --cask spotify
+  brew install --cask skype
+  brew install --cask stats
 
   # Design
-  brew cask install figma
-  brew cask install framer
+  brew install --cask figma
+  brew install --cask framer
 
   # Development
-  brew cask install adoptopenjdk
-  brew cask install android-sdk
-  brew cask install android-studio
-  brew cask install tunnelblick
-  brew cask install termius
-  brew cask install pgadmin4
-  brew cask install dbeaver-community
-  brew cask install insomnia
-  brew cask install insomnia-designer
-  brew cask install graphql-playground
-  brew cask install cyberduck
-  brew cask install gitkraken
-  brew cask install kitematic
-  brew cask install imageoptim
-  brew cask install sublime-text
-  brew cask install visual-studio-code
-  brew cask install visual-studio-code-insiders
+  brew install --cask adoptopenjdk
+  brew install --cask android-sdk
+  brew install --cask android-studio
+  # brew install --cask tunnelblick
+  brew install --cask termius
+  brew install --cask pgadmin4
+  brew install --cask dbeaver-community
+  brew install --cask insomnia
+  brew install --cask insomnia-designer
+  brew install --cask graphql-playground
+  brew install --cask cyberduck
+  brew install --cask gitkraken
+  brew install --cask kitematic
+  brew install --cask imageoptim
+  brew install --cask visual-studio-code
+  brew install --cask visual-studio-code-insiders
 
   # Quicklook
-  brew cask install qlcolorcode
-  brew cask install qlstephen
-  brew cask install qlmarkdown
-  brew cask install quicklook-json
-  brew cask install quicklook-csv
-  brew cask install qlimagesize
-  brew cask install suspicious-package
-  brew cask install quicklookase
-  brew cask install qlvideo
-  brew cask install webpquicklook
+  brew install --cask qlcolorcode
+  brew install --cask qlstephen
+  brew install --cask qlmarkdown
+  brew install --cask quicklook-json
+  brew install --cask quicklook-csv
+  brew install --cask qlimagesize
+  brew install --cask suspicious-package
+  brew install --cask quicklookase
+  brew install --cask qlvideo
+  brew install --cask webpquicklook
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas
   mas install 441258766 # Magnet
+  mas install 1451685025 # Wireguard
+  mas install 1528890965 # TextSniper
   mas install 1254981365 # Contrast
   mas install 1176895641 # Spark E-Mail
   mas install 1295203466 # MS Remote Desktop

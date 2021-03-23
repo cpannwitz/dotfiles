@@ -10,7 +10,6 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `macos.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-#  TODO: defaults write here
 # * FINDER SETTINGS
 # Show hidden files: ENABLED
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -99,17 +98,3 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
-
-
-
-
-
-
-defaults read com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)"
-defaults read com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)"
-defaults read com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)"
-defaults read com.apple.BluetoothAudioAgent "Negotiated Bitpool"
-defaults read com.apple.BluetoothAudioAgent "Negotiated Bitpool Max"
-defaults read com.apple.BluetoothAudioAgent "Negotiated Bitpool Min"
-defaults read com.apple.BluetoothAudioAgent "Stream – Max Outstanding Packets (editable)"
-defaults read com.apple.BluetoothAudioAgent "Stream – Flush Ring on Packet Drop (editable)"

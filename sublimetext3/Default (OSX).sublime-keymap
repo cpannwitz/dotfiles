@@ -1,5 +1,0 @@
-[
-
-	{ "keys": ["command+3"], "command": "toggle_comment", "args": { "block": false } },
-	{ "keys": ["command+2"], "command": "toggle_comment", "args": { "block": true } },
-]

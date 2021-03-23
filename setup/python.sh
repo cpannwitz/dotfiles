@@ -1,8 +1,8 @@
 # Check pyenv
 pyenv --version
 # Install global python version with pyenv
-pyenv install 3.9.1
-pyenv global 3.9.1
+pyenv install 3.9.2
+pyenv global 3.9.2
 
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 source $HOME/.poetry/env

@@ -121,12 +121,22 @@ botintro "STEP 7: SYMLINKS"
 source ./setup/symlinks.sh
 
 # --------
-# 8. Misc.
+# 8. Fonts
 # --------
-botintro "STEP 8: Final touches"
-source ./setup/misc.sh
+botintro "STEP 8: Fonts"
 source ./setup/fonts.sh
+
+# --------
+# 9. MacOS Settings
+# --------
+botintro "STEP 9: MacOS Settings"
 source ./setup/macos.sh
+
+# --------
+# 10. Misc
+# --------
+botintro "STEP 10: Final touches"
+source ./setup/misc.sh
 
 # Wrap-up.
 
