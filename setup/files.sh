@@ -15,7 +15,6 @@ botintro "Sourcing directories and files to handle."
 
 # Declare array of directories we want to symlink files from.
 declare -a dotfilesfilearray=(
-  "$dotfilesdir/bash"
   "$dotfilesdir/curl"
   "$dotfilesdir/editor"
   "$dotfilesdir/node"
