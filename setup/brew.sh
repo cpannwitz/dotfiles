@@ -143,6 +143,7 @@ if $brewinstall; then
   brew install --cask obsidian
   brew install --cask spotify
   brew install --cask skype
+  brew install --cask microsoft-teams
   brew install --cask stats
 
   # Design
