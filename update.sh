@@ -25,12 +25,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # NVM
 # # Install Node version 14 (LTS)
-nvm install 14 --reinstall-packages-from=node
-nvm alias default 14
+current_node_version=$(nvm current)
+remote_node_version=$(nvm version-remote --lts)
+
+if [[ "$current_node_version" != "$remote_node_version" ]]; then
+  nvm install 14 --reinstall-packages-from=14
+  nvm alias default 14
+fi;
 
 # NPM
 # Upgrade all global NPM packages
-npm install npm -g
+# npm install npm -g
 npm update -g
 npm cache verify
 
