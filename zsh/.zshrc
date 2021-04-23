@@ -114,7 +114,7 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highlighting poetry)
+plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -167,18 +167,21 @@ function t() {
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH="${HOME}/Library/Caches/heroku/autocomplete/zsh_setup" && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# ! WARNING ! PERFORMANCE DEGRADING OPTION !
+# HEROKU_AC_ZSH_SETUP_PATH="${HOME}/Library/Caches/heroku/autocomplete/zsh_setup" && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # NVM node manager integration
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# ! WARNING ! PERFORMANCE DEGRADING OPTION !
+# ! WARNING ! Doesn't seem to be useful, when zsh-nvm is used ? !
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Initialize pyenv, see: https://github.com/pyenv/pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export PATH="$HOME/.poetry/bin:$PATH"
+# ! WARNING ! PERFORMANCE DEGRADING OPTION !
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+# export PATH="$HOME/.poetry/bin:$PATH"
