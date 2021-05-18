@@ -185,3 +185,4 @@ source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 # export PATH="$HOME/.poetry/bin:$PATH"
+eval $(thefuck --alias)
