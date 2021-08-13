@@ -159,6 +159,7 @@ if $brewinstall; then
   brew install --cask pgadmin4
   brew install --cask dbeaver-community
   brew install --cask insomnia
+  brew install --cask postman
   brew install --cask graphql-playground
   brew install --cask cyberduck
   brew install --cask gitkraken
