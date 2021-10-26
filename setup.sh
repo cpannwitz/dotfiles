@@ -109,12 +109,6 @@ botintro "STEP 5: NODE"
 source ./setup/node.sh
 
 # -----------
-# 6. Python
-# -----------
-botintro "STEP 6: PYTHON"
-source ./setup/python.sh
-
-# -----------
 # 7. Symlinks
 # -----------
 botintro "STEP 7: SYMLINKS"
