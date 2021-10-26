@@ -29,8 +29,8 @@ current_node_version=$(nvm current)
 remote_node_version=$(nvm version-remote --lts)
 
 if [[ "$current_node_version" != "$remote_node_version" ]]; then
-  nvm install 14 --reinstall-packages-from=14
-  nvm alias default 14
+  nvm install 16 --reinstall-packages-from=16
+  nvm alias default 16
 fi;
 
 # NPM

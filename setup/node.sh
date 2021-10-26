@@ -17,16 +17,16 @@ export NVM_DIR="$HOME/.nvm"
 # Install latest Node version.
 # action "Installing latest Node version"
 # nvm install node
-# Install Node version 14 (LTS)
-action "Installing Node version 14 (LTS)"
-nvm install 14
+# Install Node version 16 (LTS)
+action "Installing Node version 16 (LTS)"
+nvm install 16
 
 # Set default latest Node version.
 # action "Setting default latest Node version"
 # nvm alias default node
 # Set default latest Node version.
-action "Setting default Node version 14 (LTS)"
-nvm alias default 14
+action "Setting default Node version 16 (LTS)"
+nvm alias default 16
 
 packages=(
   create-react-app
