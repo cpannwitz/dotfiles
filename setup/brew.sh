@@ -70,12 +70,11 @@ if $brewinstall; then
   brew install terminal-notifier
   brew install wifi-password
   brew install mas
-  # brew install python
-  brew install pyenv
-  brew install pyenv-virtualenv
 
   # Kubernetes
   brew install kubernetes-cli
+  brew install minikube
+  brew install k3sup
   # GITHUB CLI
   brew install gh
 
@@ -91,7 +90,8 @@ if $brewinstall; then
   brew install heroku
   brew install watchman
   brew install cocoapods
-  brew install deno
+  brew install ansible
+  brew install ansible-lint
 
   # FONTS
   running "Installing fonts"
@@ -121,6 +121,7 @@ if $brewinstall; then
   brew tap homebrew/cask-versions
 
   # General
+  brew install --cask nightowl
   brew install --cask keka
   brew install --cask 1password
   brew install --cask telegram
@@ -130,21 +131,18 @@ if $brewinstall; then
   brew install --cask toggl-track
   brew install --cask kap
   brew install --cask spotmenu
-  # brew install --cask pdf-expert
   brew install --cask karabiner-elements
   brew install --cask alfred
   brew install --cask appcleaner
-  brew install --cask google-backup-and-sync
+  brew install --cask google-drive
   brew install --cask google-chrome
   brew install --cask firefox-developer-edition
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
-  brew install --cask obsidian
   brew install --cask spotify
   brew install --cask skype
   brew install --cask microsoft-teams
-  brew install --cask stats
 
   # Design
   brew install --cask figma
@@ -157,7 +155,7 @@ if $brewinstall; then
   # brew install --cask tunnelblick
   brew install --cask termius
   brew install --cask pgadmin4
-  brew install --cask dbeaver-community
+  brew install --cask robo-3t
   brew install --cask insomnia
   brew install --cask postman
   brew install --cask graphql-playground
@@ -186,7 +184,6 @@ if $brewinstall; then
   mas install 441258766 # Magnet
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
-  mas install 1254981365 # Contrast
   mas install 1176895641 # Spark E-Mail
   mas install 1295203466 # MS Remote Desktop
 
