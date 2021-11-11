@@ -168,6 +168,8 @@ if $brewinstall; then
   brew install --cask visual-studio-code
   brew install --cask visual-studio-code-insiders
   brew install --cask alt-tab
+  brew tap ankitpokhrel/jira-cli
+  brew install jira-cli
 
   # Quicklook
   brew install --cask qlcolorcode
