@@ -70,6 +70,8 @@ if $brewinstall; then
   brew install terminal-notifier
   brew install wifi-password
   brew install mas
+  brew install jq # JSON formatter (... | jq)
+
 
   # Kubernetes
   brew install kubernetes-cli
@@ -168,8 +170,6 @@ if $brewinstall; then
   brew install --cask visual-studio-code
   brew install --cask visual-studio-code-insiders
   brew install --cask alt-tab
-  brew tap ankitpokhrel/jira-cli
-  brew install jira-cli
 
   # Quicklook
   brew install --cask qlcolorcode
