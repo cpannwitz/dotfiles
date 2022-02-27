@@ -39,11 +39,10 @@ packages=(
   tsdx
   prettier
   netlify-cli
-  firebase-tools
+  surge
   expo-cli
   @nestjs/cli
   typescript
-  knex
   yarn
 )
 

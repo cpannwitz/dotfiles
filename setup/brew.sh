@@ -72,11 +72,6 @@ if $brewinstall; then
   brew install mas
   brew install jq # JSON formatter (... | jq)
 
-
-  # Kubernetes
-  brew install kubernetes-cli
-  brew install minikube
-  brew install k3sup
   # GITHUB CLI
   brew install gh
 
@@ -92,8 +87,6 @@ if $brewinstall; then
   brew install heroku
   brew install watchman
   brew install cocoapods
-  brew install ansible
-  brew install ansible-lint
 
   # FONTS
   running "Installing fonts"
@@ -125,6 +118,7 @@ if $brewinstall; then
   brew tap homebrew/cask-versions
 
   # General
+  brew install --cask macs-fan-control
   brew install --cask nightowl
   brew install --cask keka
   brew install --cask 1password
@@ -132,20 +126,17 @@ if $brewinstall; then
   brew install --cask whatsapp
   brew install --cask signal
   brew install --cask discord
-  brew install --cask toggl-track
   brew install --cask kap
   brew install --cask spotmenu
   brew install --cask karabiner-elements
   brew install --cask alfred
   brew install --cask appcleaner
-  brew install --cask google-drive
   brew install --cask google-chrome
   brew install --cask firefox-developer-edition
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
   brew install --cask spotify
-  brew install --cask skype
   brew install --cask microsoft-teams
 
   # Design
@@ -153,19 +144,16 @@ if $brewinstall; then
   brew install --cask framer
 
   # Development
-  brew install --cask adoptopenjdk
+  brew install --cask temurin # successor to adoptopenjdk
   brew install --cask android-sdk
   brew install --cask android-studio
-  # brew install --cask tunnelblick
   brew install --cask termius
   brew install --cask pgadmin4
   brew install --cask robo-3t
   brew install --cask insomnia
-  brew install --cask postman
   brew install --cask graphql-playground
   brew install --cask cyberduck
   brew install --cask gitkraken
-  brew install --cask kitematic
   brew install --cask imageoptim
   brew install --cask visual-studio-code
   brew install --cask visual-studio-code-insiders
@@ -189,7 +177,6 @@ if $brewinstall; then
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
   mas install 1176895641 # Spark E-Mail
-  mas install 1295203466 # MS Remote Desktop
 
   running "brew cleanup"
   # Remove outdated versions from the cellar.

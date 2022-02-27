@@ -58,8 +58,6 @@ done;
 action "Backup other local directories and files (just incase...)\n"
 # Copy other misc $HOME files
 cp -Rp ~/.bash_history "$dotfilesbackupdir"
-cp -Rp ~/.extra "$dotfilesbackupdir"
-cp -Rp ~/.extra.fish "$dotfilesbackupdir"
 cp -Rp ~/.gitconfig.local "$dotfilesbackupdir"
 cp -Rp ~/.nano "$dotfilesbackupdir"
 cp -Rp ~/.nanorc "$dotfilesbackupdir"

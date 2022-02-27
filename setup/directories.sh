@@ -12,9 +12,7 @@ bot "Create required directories."
 declare -a createdirarray=(
   "$HOME/workspace"
   "$HOME/privatespace"
-  "$HOME/.tmp"
   "$HOME/.ssh"
-  "$HOME/.ssh/control"
 )
 
 action "Creating directories"

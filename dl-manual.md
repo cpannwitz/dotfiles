@@ -35,8 +35,3 @@ https://store.serif.com/de/account/
 ```
 https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg
 ```
-
-### Macs Fan Control
-```
-https://crystalidea.com/downloads/macsfancontrol.zip
-```
