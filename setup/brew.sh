@@ -121,15 +121,15 @@ if $brewinstall; then
   brew install --cask macs-fan-control
   brew install --cask nightowl
   brew install --cask keka
-  brew install --cask bitwarden
+  # brew install --cask bitwarden
   brew install --cask 1password
   brew install --cask telegram
   brew install --cask whatsapp
   brew install --cask signal
-  brew install --cask discord
   brew install --cask kap
   brew install --cask spotmenu
   brew install --cask karabiner-elements
+  brew install --cask alt-tab
   brew install --cask alfred
   brew install --cask appcleaner
   brew install --cask google-chrome
@@ -158,7 +158,6 @@ if $brewinstall; then
   brew install --cask imageoptim
   brew install --cask visual-studio-code
   brew install --cask visual-studio-code-insiders
-  brew install --cask alt-tab
 
   # Quicklook
   brew install --cask qlcolorcode
@@ -174,6 +173,7 @@ if $brewinstall; then
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas
+  mas install 1352778147 # Bitwarden
   mas install 441258766 # Magnet
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
