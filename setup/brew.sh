@@ -87,6 +87,7 @@ if $brewinstall; then
   brew install heroku
   brew install watchman
   brew install cocoapods
+  brew install hadolint
 
   # FONTS
   running "Installing fonts"
