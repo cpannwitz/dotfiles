@@ -122,7 +122,6 @@ if $brewinstall; then
   brew install --cask macs-fan-control
   brew install --cask nightowl
   brew install --cask keka
-  # brew install --cask bitwarden
   brew install --cask 1password
   brew install --cask telegram
   brew install --cask whatsapp
@@ -149,7 +148,6 @@ if $brewinstall; then
   brew install --cask temurin # successor to adoptopenjdk
   brew install --cask android-sdk
   brew install --cask android-studio
-  brew install --cask termius
   brew install --cask pgadmin4
   brew install --cask robo-3t
   brew install --cask insomnia
@@ -158,7 +156,6 @@ if $brewinstall; then
   brew install --cask gitkraken
   brew install --cask imageoptim
   brew install --cask visual-studio-code
-  brew install --cask visual-studio-code-insiders
 
   # Quicklook
   brew install --cask qlcolorcode
@@ -174,7 +171,6 @@ if $brewinstall; then
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas
-  mas install 1352778147 # Bitwarden
   mas install 441258766 # Magnet
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
