@@ -131,9 +131,12 @@ if $brewinstall; then
   brew install --cask karabiner-elements
   brew install --cask alt-tab
   brew install --cask alfred
+  brew install --cask raycast
   brew install --cask appcleaner
   brew install --cask google-chrome
+  brew install --cask google-backup-and-sync
   brew install --cask firefox-developer-edition
+  brew install --cask microsoft-edge
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
@@ -155,6 +158,7 @@ if $brewinstall; then
   brew install --cask cyberduck
   brew install --cask gitkraken
   brew install --cask imageoptim
+  brew install --cask stats
   brew install --cask visual-studio-code
 
   # Quicklook
