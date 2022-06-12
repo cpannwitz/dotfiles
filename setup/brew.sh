@@ -179,6 +179,7 @@ if $brewinstall; then
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
   mas install 1176895641 # Spark E-Mail
+  mas install 966085870 # TickTick
 
   running "brew cleanup"
   # Remove outdated versions from the cellar.
