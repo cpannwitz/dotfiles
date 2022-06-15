@@ -123,6 +123,7 @@ if $brewinstall; then
   brew install --cask nightowl
   brew install --cask keka
   brew install --cask 1password
+  brew install --cask 1password-cli
   brew install --cask telegram
   brew install --cask whatsapp
   brew install --cask signal
