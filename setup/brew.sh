@@ -50,13 +50,11 @@ if $brewinstall; then
 
   # Key tools.
   brew install git
-  brew install svn
 
   # zsh
   brew install zsh
   brew install zsh-completion
   brew install zsh-autosuggestions
-  brew install thefuck
 
   # Install `wget`
   brew install wget
@@ -83,11 +81,11 @@ if $brewinstall; then
   brew install redis
 
   # DEVOPS
-  brew tap heroku/brew
-  brew install heroku
+  # brew tap heroku/brew
+  # brew install heroku
   brew install watchman
   brew install cocoapods
-  brew install hadolint
+  brew install hadolint # Docker linter
 
   # FONTS
   running "Installing fonts"
@@ -122,6 +120,7 @@ if $brewinstall; then
   brew install --cask macs-fan-control
   brew install --cask nightowl
   brew install --cask keka
+  brew install --cask termius
   brew install --cask 1password
   brew install --cask 1password-cli
   brew install --cask telegram
@@ -131,7 +130,6 @@ if $brewinstall; then
   brew install --cask spotmenu
   brew install --cask karabiner-elements
   brew install --cask alt-tab
-  brew install --cask alfred
   brew install --cask raycast
   brew install --cask appcleaner
   brew install --cask google-chrome
@@ -141,6 +139,7 @@ if $brewinstall; then
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
+  brew install --cask obsidian
   brew install --cask spotify
   brew install --cask microsoft-teams
 
@@ -161,7 +160,7 @@ if $brewinstall; then
   brew install --cask imageoptim
   brew install --cask stats
   brew install --cask visual-studio-code
-  brew install --cask lens
+  brew install --cask lens # k8s
 
   # Quicklook
   brew install --cask qlcolorcode

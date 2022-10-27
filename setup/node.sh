@@ -8,7 +8,7 @@ fi;
 
 # Install NVM via curl script:
 botintro "Installing NVM..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 # Run the NVM initialize script
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -18,30 +18,21 @@ export NVM_DIR="$HOME/.nvm"
 # action "Installing latest Node version"
 # nvm install node
 # Install Node version 16 (LTS)
-action "Installing Node version 16 (LTS)"
-nvm install 16
+action "Installing Node version 18 (LTS)"
+nvm install 18
 
 # Set default latest Node version.
 # action "Setting default latest Node version"
 # nvm alias default node
 # Set default latest Node version.
-action "Setting default Node version 16 (LTS)"
-nvm alias default 16
+action "Setting default Node version 18 (LTS)"
+nvm alias default 18
 
 packages=(
-  create-react-app
-  create-next-app
   eslint
-  gatsby-cli
-  generator-code
   np
   npm
-  tsdx
   prettier
-  netlify-cli
-  surge
-  expo-cli
-  @nestjs/cli
   typescript
   yarn
 )

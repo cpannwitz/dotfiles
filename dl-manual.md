@@ -5,6 +5,11 @@
 - Fill in: `~/dotfiles/iterm2` -> com.googlecode.iterm2.plist
 - Restart iTerm2.
 
+## Configure Raycast
+- Open Raycast
+- Go to preferences
+- Import Raycast config -> Password like Password-Manager
+
 ## Download Apps
 ### Flutter
 Download, and extract to `~/flutter`

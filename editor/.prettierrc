@@ -9,8 +9,10 @@
   "trailingComma": "es5",
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
+  "arrowParens": "always",
   "proseWrap": "preserve",
   "htmlWhitespaceSensitivity": "css",
-  "requirePragma": false
+  "requirePragma": false,
+  "vueIndentScriptAndStyle": false,
+  "embeddedLanguageFormatting": "auto"
 }

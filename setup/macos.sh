@@ -75,6 +75,9 @@ defaults write com.apple.dock minimize-to-application -int 1
 defaults write com.apple.dock show-recents -int 0
 
 # * SCREENSHOTS
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/screenshots"
+
 # change screenshot format to jpg
 defaults write com.apple.screencapture type jpg
 
