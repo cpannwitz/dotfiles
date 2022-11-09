@@ -15,24 +15,22 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Install latest Node version.
-# action "Installing latest Node version"
-# nvm install node
-# Install Node version 16 (LTS)
-action "Installing Node version 18 (LTS)"
-nvm install 18
+action "Installing Latest Node Version (LTS)"
+latest_node_lts_version=$(nvm version-remote --lts)
+nvm install $latest_node_lts_version
 
 # Set default latest Node version.
-# action "Setting default latest Node version"
-# nvm alias default node
-# Set default latest Node version.
-action "Setting default Node version 18 (LTS)"
-nvm alias default 18
+action "Setting default latest Node version (LTS)"
+nvm alias default $latest_node_lts_version
 
 packages=(
+  create-next-app
   eslint
   np
   npm
   prettier
+  prisma
+  supabase
   typescript
   yarn
 )
