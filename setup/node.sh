@@ -25,6 +25,7 @@ nvm alias default $latest_node_lts_version
 
 packages=(
   create-next-app
+  expo
   eslint
   np
   npm
