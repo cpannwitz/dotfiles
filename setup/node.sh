@@ -29,10 +29,12 @@ packages=(
   eslint
   np
   npm
+  nuxi
   prettier
   prisma
   supabase
   typescript
+  @vue/cli
   yarn
 )
 
