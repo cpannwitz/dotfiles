@@ -21,22 +21,3 @@ Because Docker comes with plenty of stuff, which makes manual installation cumbe
 ```
 https://docs.docker.com/docker-for-mac/install/
 ```
-### Affinity Suite
-#### Affinity Designer
-```
-https://store.serif.com/download/aa4dee/
-```
-#### Affinity Photo
-```
-https://store.serif.com/download/075b51/
-```
-#### Credentials
-```
-https://store.serif.com/de/account/
-```
-
-### Boom3D
-#### Download
-```
-https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg
-```

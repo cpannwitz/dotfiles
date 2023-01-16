@@ -118,6 +118,7 @@ if $brewinstall; then
 
   # General
   brew install --cask macs-fan-control
+  brew install --cask boom-3d
   brew install --cask nightowl
   brew install --cask keka
   brew install --cask termius
@@ -146,6 +147,8 @@ if $brewinstall; then
   # Design
   brew install --cask figma
   brew install --cask framer
+  brew install --cask affinity-photo
+  brew install --cask affinity-designer
 
   # Development
   brew install --cask temurin # successor to adoptopenjdk
