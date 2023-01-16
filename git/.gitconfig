@@ -1,3 +1,8 @@
+[init]
+	defaultBranch = main
+[apply]
+  # Detect whitespace errors when applying a patch
+  whitespace = fix
 [alias]
 	undo = reset --soft HEAD^
 	# Not quite as common as an amend, but still common
@@ -181,6 +186,8 @@
 	versiontag = v
 [push]
 	default = simple
+[pull]
+	rebase = false
 [help]
   # Automatically correct and execute mistyped commands
   autocorrect = 1
@@ -236,3 +243,6 @@
 
 [url "git://gist.github.com/"]
   insteadOf = "gist:"
+[Include]
+  # Local modifications that shouldn't be stored in a repo.
+  path = "./.gitconfig.local"

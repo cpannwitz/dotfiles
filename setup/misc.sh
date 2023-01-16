@@ -21,5 +21,7 @@ compaudit | xargs chmod g-w,o-w
 # Install Theme for iTerm2
 action "Installing Theme for iTerm2"
 open "${dotfilesdir}/iterm2/palenight.itermcolors"
+open "${dotfilesdir}/iterm2/nightowl.itermcolors"
+open "${dotfilesdir}/iterm2/tokyo-night.itermcolors"
 
 success "Final touches in place."

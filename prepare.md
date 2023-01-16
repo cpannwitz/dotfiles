@@ -10,16 +10,15 @@ Customise your Git config by creating a ~/.gitconfig.local file which will exten
 Example ~/.gitconfig.local file:
 ```
 [user]
-
   name = "Firstname Lastname"
 	username = "username"
   email = "your@emailaddress.com"
-
 [github]
-
   user = your-github-username
-
 [credential]
-
   helper = osxkeychain
+[includeIf "gitdir:~/workspace/"]
+    path = ~/workspace/.gitconfig
 ```
+
+Include another .gitconfig in ~/workspace, to override with work credentials, if necessary (same content as above)
