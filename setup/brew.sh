@@ -97,6 +97,7 @@ if $brewinstall; then
   brew install --cask font-fira-sans
   brew install --cask font-fontawesome
   brew install --cask font-inconsolata
+  brew install --cask font-inter
   brew install --cask font-hack
   brew install --cask font-jetbrains-mono
   brew install --cask font-lato
