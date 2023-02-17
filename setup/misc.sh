@@ -15,9 +15,6 @@ action "Setting chmod for ~/.ssh"
 chmod 700 "$HOME/.ssh"
 print_result $? "Set chmod 700 on ~/.ssh"
 
-action "Check for permission issues:"
-compaudit | xargs chmod g-w,o-w
-
 # Install Theme for iTerm2
 action "Installing Theme for iTerm2"
 open "${dotfilesdir}/iterm2/palenight.itermcolors"

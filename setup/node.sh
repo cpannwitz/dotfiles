@@ -22,6 +22,7 @@ nvm install $latest_node_lts_version
 # Set default latest Node version.
 action "Setting default latest Node version (LTS)"
 nvm alias default $latest_node_lts_version
+nvm use $latest_node_lts_version
 
 packages=(
   create-next-app
@@ -29,10 +30,11 @@ packages=(
   eslint
   np
   npm
+  nuxt
+  oazapfts
   nuxi
   prettier
   prisma
-  supabase
   typescript
   @vue/cli
   yarn

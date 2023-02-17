@@ -184,10 +184,6 @@
 	hotfix = hotfix-
 	support = support-
 	versiontag = v
-[push]
-	default = simple
-[pull]
-	rebase = false
 [help]
   # Automatically correct and execute mistyped commands
   autocorrect = 1
@@ -196,8 +192,6 @@
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	# only accept fast-forward merges
-  ff = only
 
   # Include summaries of merged commits in newly created merge commit messages
   log = true
@@ -229,7 +223,7 @@
 	# Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
 	# https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
 [url "git@github.com:"]
-  insteadOf = "gh:"
+	insteadOf = https://github.com/
   pushInsteadOf = "github:"
   pushInsteadOf = "git://github.com/"
 

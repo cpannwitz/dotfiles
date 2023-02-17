@@ -31,9 +31,13 @@ if $brewinstall; then
     # note: if your /usr/local is locked down (like at Google), you can do this to place everything in ~/.homebrew
     # mkdir "$HOME/.homebrew" && curl -L https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOME/.homebrew
     # then add this to your path: export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     print_result $? 'Install Homebrew.'
+
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/cpannwitz/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/cpannwitz/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
   else
     success "Homebrew already installed."
   fi;
@@ -58,8 +62,6 @@ if $brewinstall; then
 
   # Install `wget`
   brew install wget
-
-  # Install more recent versions of some native macOS tools.
   brew install nano
   brew install openssh
 
@@ -67,7 +69,7 @@ if $brewinstall; then
   brew install brew-cask-completion
   brew install terminal-notifier
   brew install wifi-password
-  brew install mas
+  brew install mas # package manager
   brew install jq # JSON formatter (... | jq)
 
   # GITHUB CLI
@@ -80,12 +82,19 @@ if $brewinstall; then
   brew install mysql
   brew install redis
 
-  # DEVOPS
-  # brew tap heroku/brew
-  # brew install heroku
+  # DEV
   brew install watchman
   brew install cocoapods
   brew install hadolint # Docker linter
+  brew install httpie
+
+  # Golang
+  brew install go
+  brew install golangci-lint
+  # global Golang packages:
+  # go install github.com/swaggo/swag/cmd/swag@latest
+  # go install github.com/swaggo/swag/cmd/swag@1.8.7
+  # go install github.com/securego/gosec/v2/cmd/gosec@latest
 
   # FONTS
   running "Installing fonts"
@@ -118,6 +127,7 @@ if $brewinstall; then
   brew tap homebrew/cask-versions
 
   # General
+  brew install --cask browserosaurus
   brew install --cask macs-fan-control
   brew install --cask boom-3d
   brew install --cask nightowl
@@ -125,31 +135,28 @@ if $brewinstall; then
   brew install --cask termius
   brew install --cask 1password
   brew install --cask 1password-cli
+  brew install --cask bitwarden
   brew install --cask telegram
   brew install --cask whatsapp
   brew install --cask signal
-  brew install --cask kap
-  brew install --cask spotmenu
   brew install --cask karabiner-elements
   brew install --cask alt-tab
   brew install --cask raycast
   brew install --cask appcleaner
   brew install --cask google-chrome
-  brew install --cask google-backup-and-sync
   brew install --cask firefox-developer-edition
   brew install --cask microsoft-edge
+  brew install --cask orion
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
   brew install --cask obsidian
   brew install --cask spotify
-  brew install --cask microsoft-teams
+  brew install --cask google-drive # disable chrome plugins to allow auth in browser
 
   # Design
   brew install --cask figma
   brew install --cask framer
-  brew install --cask affinity-photo
-  brew install --cask affinity-designer
 
   # Development
   brew install --cask temurin # successor to adoptopenjdk

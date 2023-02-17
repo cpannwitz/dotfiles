@@ -61,16 +61,16 @@ fi;
 # Ask for the administrator password upfront.
 ask_for_sudo
 
-# Generate new SSH-Key
-action "Generating new SSH-Key:\n"
-ssh-keygen -t rsa
+# # Generate new SSH-Key
+# action "Generating new SSH-Key:\n"
+# ssh-keygen -t rsa
 
 # Source directories and files to handle.
 source ./setup/files.sh
 
-# Install all available macos updates.
-action "Installing Mac updates:\n"
-sudo softwareupdate -ia
+# # Install all available macos updates.
+# action "Installing Mac updates:\n"
+# sudo softwareupdate -ia
 
 # ---------
 # 1. Backup
@@ -99,7 +99,7 @@ fi;
 # -----------
 # 4. ZSH
 # -----------
-botintro "STEP 4: SYMLINKS"
+botintro "STEP 4: ZSH"
 source ./setup/zsh.sh
 
 # -----------
