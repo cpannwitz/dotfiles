@@ -59,6 +59,7 @@ if $brewinstall; then
   brew install zsh
   brew install zsh-completion
   brew install zsh-autosuggestions
+  brew install starship
 
   # Install `wget`
   brew install wget
@@ -92,7 +93,6 @@ if $brewinstall; then
   brew install go
   brew install golangci-lint
   # global Golang packages:
-  # go install github.com/swaggo/swag/cmd/swag@latest
   # go install github.com/swaggo/swag/cmd/swag@1.8.7
   # go install github.com/securego/gosec/v2/cmd/gosec@latest
 
@@ -120,6 +120,8 @@ if $brewinstall; then
   brew install --cask font-cascadia-mono
   brew install --cask font-cascadia-mono-pl
   brew install --cask font-victor-mono
+  brew install --cask font-hack-nerd-font
+  brew install --cask font-inconsolata-nerd-font
 
   running "Installing cask apps"
 
@@ -156,7 +158,7 @@ if $brewinstall; then
 
   # Design
   brew install --cask figma
-  brew install --cask framer
+  # brew install --cask framer
 
   # Development
   brew install --cask temurin # successor to adoptopenjdk
