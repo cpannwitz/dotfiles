@@ -18,15 +18,22 @@ export NVM_DIR="$HOME/.nvm"
 action "Installing Latest Node Version (LTS)"
 latest_node_lts_version=$(nvm version-remote --lts)
 nvm install $latest_node_lts_version
+# # Set default latest Node version.
+# action "Setting default latest Node version (LTS)"
+# nvm alias default $latest_node_lts_version
+# nvm use $latest_node_lts_version
+
+# Install Node 16 version.
+action "Installing Node 16 Version (LTS)"
+nvm install 16
 
 # Set default latest Node version.
-action "Setting default latest Node version (LTS)"
-nvm alias default $latest_node_lts_version
-nvm use $latest_node_lts_version
+action "Setting Node 16 Version as Default"
+nvm alias default 16
+nvm use 16
 
 packages=(
   create-next-app
-  expo
   eslint
   np
   npm
