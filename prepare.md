@@ -1,7 +1,16 @@
-# Prepare the System Integrity Protection
+# Optional: Prepare the System Integrity Protection
 1. Restart MacOS, immediately press `CMD + R`
 2. In Terminal, write: `csrutil disable`
 3. Restart
+
+# Accept XCode License
+`sudo xcodebuild -license`
+
+# Add SSH keys
+`ssh-add --apple-use-keychain ~/.ssh/PRIVATE_KEY`
+
+# Fix Quicklook Plugins
+`xattr -d -r com.apple.quarantine ~/Library/QuickLook`
 
 # Prepare .gitconfig
 Customising Git
