@@ -168,7 +168,6 @@ if $brewinstall; then
   brew install --cask android-sdk
   brew install --cask android-studio
   brew install --cask pgadmin4
-  brew install --cask robo-3t
   brew install --cask insomnia
   brew install --cask graphql-playground
   brew install --cask cyberduck
