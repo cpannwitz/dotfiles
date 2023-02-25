@@ -201,6 +201,9 @@ if $brewinstall; then
   # Remove outdated versions from the cellar.
   brew cleanup
 
+  # Disable Brew analytics
+  brew analytics off
+
   # turn off prevent sleep.
   killall caffeinate
 fi;
