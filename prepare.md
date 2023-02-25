@@ -3,6 +3,12 @@
 2. In Terminal, write: `csrutil disable`
 3. Restart
 
+# Do Softwareupdates
+Via Systemsettings
+
+# Install XCode
+`xcode-select --install`
+
 # Accept XCode License
 `sudo xcodebuild -license`
 

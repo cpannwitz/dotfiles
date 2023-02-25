@@ -46,6 +46,9 @@ if $brewinstall; then
   # Make sure we’re using the latest Homebrew.
   brew update
 
+  # Make sure we’re using the latest casks
+  brew upgrade --cask
+
   # Upgrade any already-installed formulae.
   brew upgrade
 
@@ -189,7 +192,7 @@ if $brewinstall; then
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas
-  mas install 441258766 # Magnet
+  # mas install 441258766 # Magnet
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
   mas install 1176895641 # Spark E-Mail
