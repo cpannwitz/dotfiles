@@ -91,6 +91,7 @@ if $brewinstall; then
   brew install cocoapods
   brew install hadolint # Docker linter
   brew install httpie
+  brew install pre-commit
 
   # Golang
   brew install go
