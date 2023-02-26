@@ -97,7 +97,7 @@ if $brewinstall; then
   brew install go
   brew install golangci-lint
   # global Golang packages:
-  # go install github.com/swaggo/swag/cmd/swag@1.8.7
+  # go install github.com/swaggo/swag/cmd/swag@v1.8.7
   # go install github.com/securego/gosec/v2/cmd/gosec@latest
 
   # FONTS
