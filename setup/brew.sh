@@ -159,6 +159,7 @@ if $brewinstall; then
   brew install --cask obsidian
   brew install --cask spotify
   brew install --cask google-drive # disable chrome plugins to allow auth in browser
+  brew install --cask mullvadvpn
 
   # Design
   brew install --cask figma
@@ -172,7 +173,6 @@ if $brewinstall; then
   brew install --cask insomnia
   brew install --cask graphql-playground
   brew install --cask cyberduck
-  brew install --cask gitkraken
   brew install --cask imageoptim
   brew install --cask stats
   brew install --cask visual-studio-code
