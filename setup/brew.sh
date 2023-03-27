@@ -152,7 +152,6 @@ if $brewinstall; then
   brew install --cask google-chrome
   brew install --cask firefox-developer-edition
   brew install --cask microsoft-edge
-  brew install --cask orion
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
