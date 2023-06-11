@@ -150,6 +150,7 @@ if $brewinstall; then
   brew install --cask raycast
   brew install --cask appcleaner
   brew install --cask google-chrome
+  brew install --cask google-chrome-beta
   brew install --cask firefox-developer-edition
   brew install --cask microsoft-edge
   brew install --cask iterm2
@@ -159,6 +160,7 @@ if $brewinstall; then
   brew install --cask spotify
   brew install --cask google-drive # disable chrome plugins to allow auth in browser
   brew install --cask mullvadvpn
+  brew install --cask topnotch
 
   # Design
   brew install --cask figma
