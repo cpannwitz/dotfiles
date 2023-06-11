@@ -240,3 +240,6 @@
 [Include]
   # Local modifications that shouldn't be stored in a repo.
   path = "./.gitconfig.local"
+[pull]
+	ff = only
+	rebase = false

@@ -14,124 +14,19 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 source ~/workspace/workenv.sh
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="spaceship"
-# SPACESHIP_TIME_SHOW="true"
-# SPACESHIP_DIR_TRUNC="0"
-# SPACESHIP_PROMPT_ORDER=(
-#   time           # Time stamps section
-#   user           # Username section
-#   dir            # Current directory section
-#   host           # Hostname section
-#   git            # Git section (git_branch + git_status)
-#   # hg             # Mercurial section (hg_branch  + hg_status)
-#   package        # Package version
-#   node           # Node.js section
-#   bun            # Bun section
-#   deno           # Deno section
-#   ruby           # Ruby section
-#   python         # Python section
-#   # elm            # Elm section
-#   # elixir         # Elixir section
-#   xcode          # Xcode section
-#   swift          # Swift section
-#   golang         # Go section
-#   # perl           # Perl section
-#   php            # PHP section
-#   rust           # Rust section
-#   # haskell        # Haskell Stack section
-#   # scala          # Scala section
-#   kotlin         # Kotlin section
-#   java           # Java section
-#   lua            # Lua section
-#   dart           # Dart section
-#   # julia          # Julia section
-#   # crystal        # Crystal section
-#   docker         # Docker section
-#   docker_compose # Docker section
-#   # aws            # Amazon Web Services section
-#   gcloud         # Google Cloud Platform section
-#   azure          # Azure section
-#   venv           # virtualenv section
-#   conda          # conda virtualenv section
-#   dotnet         # .NET section
-#   ocaml          # OCaml section
-#   vlang          # V section
-#   zig            # Zig section
-#   purescript     # PureScript section
-#   erlang         # Erlang section
-#   kubectl        # Kubectl context section
-#   ansible        # Ansible section
-#   terraform      # Terraform workspace section
-#   pulumi         # Pulumi stack section
-#   ibmcloud       # IBM Cloud section
-#   nix_shell      # Nix shell
-#   gnu_screen     # GNU Screen section
-#   exec_time      # Execution time
-#   async          # Async jobs indicator
-#   line_sep       # Line break
-#   battery        # Battery level and status
-#   jobs           # Background jobs indicator
-#   exit_code      # Exit code section
-#   sudo           # Sudo indicator
-#   char           # Prompt character
-# )
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=3
+export UPDATE_ZSH_DAYS=1
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # ZSH-NVM settings
 # https://github.com/lukechilds/zsh-nvm
@@ -147,31 +42,6 @@ plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highl
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 DISABLE_MAGIC_FUNCTIONS=true
@@ -193,9 +63,6 @@ function t() {
 # iterm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# heroku autocomplete setup
-# ! WARNING ! PERFORMANCE DEGRADING OPTION !
-# HEROKU_AC_ZSH_SETUP_PATH="${HOME}/Library/Caches/heroku/autocomplete/zsh_setup" && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # NVM node manager integration
 # ! WARNING ! PERFORMANCE DEGRADING OPTION !
