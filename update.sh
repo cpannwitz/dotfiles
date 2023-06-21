@@ -21,13 +21,36 @@ brew cleanup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# NVM
-current_node_version=$(nvm current)
-remote_node_version=$(nvm version-remote --lts)
+# Install Node 16 version.
+nvm install 16 --skip-default-packages --latest-npm
 
-if [[ "$current_node_version" != "$remote_node_version" ]]; then
-  nvm install $remote_node_version --reinstall-packages-from=$current_node_version
-fi;
+# Install Node 18 version.
+nvm install 18 --skip-default-packages --latest-npm
+
+# Install Node 16 version.
+nvm install 20 --skip-default-packages --latest-npm
+
+# Set default latest Node version.
+nvm alias default 20
+nvm use 20
+
+packages=(
+  eslint
+  np
+  npm
+  oazapfts
+  prettier
+  prisma
+  typescript
+  @vue/cli
+  yarn
+  pnpm
+)
+
+# Installing some default global npm packages
+for package in ${packages[@]}; do
+  npm install --global $package
+done
 
 # NPM
 # Upgrade all global NPM packages
