@@ -60,7 +60,7 @@ if $brewinstall; then
 
   # zsh
   brew install zsh
-  brew install zsh-completion
+  brew install zsh-completions
   brew install zsh-autosuggestions
   brew install starship
 
@@ -151,22 +151,24 @@ if $brewinstall; then
   brew install --cask appcleaner
   brew install --cask google-chrome
   brew install --cask google-chrome-beta
+  brew install --cask google-chrome-dev
   brew install --cask firefox-developer-edition
   brew install --cask microsoft-edge
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
-  brew install --cask obsidian
+  brew install --cask heynote
   brew install --cask spotify
   brew install --cask google-drive # disable chrome plugins to allow auth in browser
   brew install --cask mullvadvpn
   brew install --cask topnotch
 
   # Design
-  brew install --cask figma
+  # brew install --cask figma
   # brew install --cask framer
 
   # Development
+  brew install --cask google-cloud-sdk
   brew install --cask temurin # successor to adoptopenjdk
   brew install --cask android-sdk
   brew install --cask android-studio
@@ -193,11 +195,13 @@ if $brewinstall; then
 
   # Install Mac App Store Applications.
   # ! requires: brew install mas
-  # mas install 441258766 # Magnet
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
   mas install 1176895641 # Spark E-Mail
   mas install 966085870 # TickTick
+  mas install 1019371109 # BalanceLock -> Boom3D
+  mas install 507257563 # Sip
+  mas install 1352778147 # Bitwarden
 
   running "brew cleanup"
   # Remove outdated versions from the cellar.

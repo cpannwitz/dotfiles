@@ -11,11 +11,11 @@
 # Update the formulaes and Homebrew itself:
 brew update
 # HOMEBREW CASKS
-brew upgrade --cask
+brew upgrade --cask --greedy
 # Upgrade all formulaes:
-brew upgrade
+brew upgrade --greedy
 # Uninstall unused old versions of formulaes:
-brew cleanup
+brew cleanup --prune
 
 # We need NVM loading:
 export NVM_DIR="$HOME/.nvm"

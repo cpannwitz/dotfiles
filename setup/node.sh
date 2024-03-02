@@ -32,15 +32,12 @@ nvm alias default 20
 nvm use 20
 
 packages=(
-  create-next-app
   eslint
   np
   npm
-  oazapfts
   prettier
-  prisma
   typescript
-  @vue/cli
+  corepack
   yarn
   pnpm
 )
