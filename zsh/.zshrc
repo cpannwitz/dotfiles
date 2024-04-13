@@ -12,6 +12,16 @@ export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+# Path to Temurin / OpenJDK / Java
+# NOTE: version 20 required by React Native | if not needed, omit "-v 20"
+export JAVA_HOME=$(/usr/libexec/java_home -v 20)
+export PATH="$PATH:${JAVA_HOME}"
+
+# Path to Android Studio, SDK, Emulator
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 source ~/workspace/workenv.sh
 
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"

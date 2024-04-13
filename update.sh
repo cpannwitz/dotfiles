@@ -15,7 +15,7 @@ brew upgrade --cask --greedy
 # Upgrade all formulaes:
 brew upgrade --greedy-auto-updates
 # Uninstall unused old versions of formulaes:
-brew cleanup --prune
+brew cleanup --prune=all
 
 # We need NVM loading:
 export NVM_DIR="$HOME/.nvm"
