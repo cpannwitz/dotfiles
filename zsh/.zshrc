@@ -6,6 +6,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Path to flutter configuration
 export PATH="$PATH:$HOME/flutter/bin"
+# Path to CocoaPods
+export PATH=$HOME/.gem/bin:$PATH
 
 # Path to Golang installation
 export GOPATH=$HOME/go
@@ -19,6 +21,7 @@ export PATH="$PATH:${JAVA_HOME}"
 
 # Path to Android Studio, SDK, Emulator
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
@@ -27,6 +30,11 @@ source ~/workspace/workenv.sh
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
+# Use Brew Ruby instead of MacOS Ruby
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
 
 
 
