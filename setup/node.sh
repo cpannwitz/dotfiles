@@ -36,8 +36,10 @@ packages=(
   np
   npm
   prettier
+  prisma
   typescript
   corepack
+  @vue/cli
   yarn
   pnpm
 )

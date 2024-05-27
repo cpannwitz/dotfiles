@@ -38,10 +38,10 @@ packages=(
   eslint
   np
   npm
-  oazapfts
   prettier
   prisma
   typescript
+  corepack
   @vue/cli
   yarn
   pnpm

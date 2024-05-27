@@ -17,8 +17,10 @@ print_result $? "Set chmod 700 on ~/.ssh"
 
 # Install Theme for iTerm2
 action "Installing Theme for iTerm2"
+open "${dotfilesdir}/iterm2/catppuccin-macchiato.itermcolors"
 open "${dotfilesdir}/iterm2/palenight.itermcolors"
 open "${dotfilesdir}/iterm2/nightowl.itermcolors"
+open "${dotfilesdir}/iterm2/nightowl-light.itermcolors"
 open "${dotfilesdir}/iterm2/tokyo-night.itermcolors"
 
 success "Final touches in place."

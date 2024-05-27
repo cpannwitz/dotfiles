@@ -71,8 +71,9 @@ if $brewinstall; then
 
   # OTHER USEFUL UTILS
   brew install brew-cask-completion
-  brew install terminal-notifier
+  brew install terminal-notifier # needed for zsh-bgnotify
   brew install wifi-password
+  brew install exa # ls replacement
   brew install mas # package manager
   brew install jq # JSON formatter (... | jq)
 
@@ -91,14 +92,10 @@ if $brewinstall; then
   brew install cocoapods
   brew install hadolint # Docker linter
   brew install httpie
-  brew install pre-commit
 
   # Golang
   brew install go
   brew install golangci-lint
-  # global Golang packages:
-  # go install github.com/swaggo/swag/cmd/swag@v1.8.7
-  # go install github.com/securego/gosec/v2/cmd/gosec@latest
 
   # FONTS
   running "Installing fonts"
@@ -106,24 +103,9 @@ if $brewinstall; then
   # MUST HAVE STEP to install fonts!
   brew tap homebrew/cask-fonts
 
-  brew install --cask font-fira-code
-  brew install --cask font-fira-sans
   brew install --cask font-fontawesome
   brew install --cask font-inconsolata
-  brew install --cask font-inter
-  brew install --cask font-hack
-  brew install --cask font-jetbrains-mono
-  brew install --cask font-lato
-  brew install --cask font-open-sans
   brew install --cask font-roboto
-  brew install --cask font-source-code-pro
-  brew install --cask font-source-sans-pro
-  brew install --cask font-ubuntu
-  brew install --cask font-cascadia-code
-  brew install --cask font-cascadia-code-pl
-  brew install --cask font-cascadia-mono
-  brew install --cask font-cascadia-mono-pl
-  brew install --cask font-victor-mono
   brew install --cask font-hack-nerd-font
   brew install --cask font-inconsolata-nerd-font
 
@@ -136,9 +118,8 @@ if $brewinstall; then
   brew install --cask browserosaurus
   brew install --cask macs-fan-control
   brew install --cask boom-3d
-  brew install --cask nightowl
+  brew install --cask nightfall
   brew install --cask keka
-  brew install --cask termius
   brew install --cask 1password
   brew install --cask 1password-cli
   brew install --cask bitwarden
@@ -153,7 +134,6 @@ if $brewinstall; then
   brew install --cask google-chrome-beta
   brew install --cask google-chrome-dev
   brew install --cask firefox-developer-edition
-  brew install --cask microsoft-edge
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
@@ -163,10 +143,6 @@ if $brewinstall; then
   brew install --cask mullvadvpn
   brew install --cask topnotch
 
-  # Design
-  # brew install --cask figma
-  # brew install --cask framer
-
   # Development
   brew install --cask google-cloud-sdk
   brew install --cask temurin # successor to adoptopenjdk
@@ -174,12 +150,10 @@ if $brewinstall; then
   brew install --cask android-studio
   brew install --cask pgadmin4
   brew install --cask insomnia
-  brew install --cask graphql-playground
-  brew install --cask cyberduck
   brew install --cask imageoptim
   brew install --cask stats
   brew install --cask visual-studio-code
-  brew install --cask lens # k8s
+  brew install --cask openlens # k8s
 
   # Quicklook
   brew install --cask qlcolorcode

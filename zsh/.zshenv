@@ -99,7 +99,9 @@ alias where=which
 alias cask='brew cask'
 
 # List all files colorized
-alias ll="ls -l ${colorflag}"
+# alias ll="ls -l ${colorflag}"
+alias ls="eza -l"
+alias ll="eza -la"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"

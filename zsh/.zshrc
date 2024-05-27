@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -56,7 +63,10 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-syntax-highlighting)
+
+# See: https://github.com/zsh-users/zsh-completions/issues/603
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,21 +91,11 @@ function t() {
 # iterm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-# NVM node manager integration
-# ! WARNING ! PERFORMANCE DEGRADING OPTION !
-# ! WARNING ! Doesn't seem to be useful, when zsh-nvm is used ? !
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Initialize pyenv, see: https://github.com/pyenv/pyenv
-# ! WARNING ! PERFORMANCE DEGRADING OPTION !
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-# export PATH="$HOME/.poetry/bin:$PATH"
+# eval "$(starship init zsh)"
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
-eval "$(starship init zsh)"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
