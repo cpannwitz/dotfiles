@@ -32,6 +32,8 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export NODE_OPTIONS=--max-old-space-size=8192
+
 source ~/workspace/workenv.sh
 
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"

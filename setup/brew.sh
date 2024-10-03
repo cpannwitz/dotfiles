@@ -62,7 +62,7 @@ if $brewinstall; then
   brew install zsh
   brew install zsh-completions
   brew install zsh-autosuggestions
-  brew install starship
+  brew install powerlevel10k
 
   # Install `wget`
   brew install wget
@@ -88,10 +88,16 @@ if $brewinstall; then
   brew install redis
 
   # DEV
+  brew install ruby
+  brew install rust
   brew install watchman
   brew install cocoapods
   brew install hadolint # Docker linter
   brew install httpie
+  brew install sonar-scanner
+  brew install imagemagick
+  brew install k9s
+  brew install supabase
 
   # Golang
   brew install go
@@ -131,9 +137,9 @@ if $brewinstall; then
   brew install --cask raycast
   brew install --cask appcleaner
   brew install --cask google-chrome
-  brew install --cask google-chrome-beta
-  brew install --cask google-chrome-dev
-  brew install --cask firefox-developer-edition
+  brew install --cask google-chrome@beta
+  brew install --cask google-chrome@dev
+  brew install --cask firefox@developer-edition
   brew install --cask iterm2
   brew install --cask slack
   brew install --cask notion
@@ -153,7 +159,6 @@ if $brewinstall; then
   brew install --cask imageoptim
   brew install --cask stats
   brew install --cask visual-studio-code
-  brew install --cask openlens # k8s
 
   # Quicklook
   brew install --cask qlcolorcode
@@ -171,7 +176,7 @@ if $brewinstall; then
   # ! requires: brew install mas
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
-  mas install 1176895641 # Spark E-Mail
+  # mas install 1176895641 # Spark E-Mail
   mas install 966085870 # TickTick
   mas install 1019371109 # BalanceLock -> Boom3D
   mas install 507257563 # Sip
