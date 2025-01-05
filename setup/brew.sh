@@ -64,16 +64,12 @@ if $brewinstall; then
   brew install zsh-autosuggestions
   brew install powerlevel10k
 
-  # Install `wget`
-  brew install wget
-  brew install nano
-  brew install openssh
 
   # OTHER USEFUL UTILS
+  brew install openssh
   brew install brew-cask-completion
   brew install terminal-notifier # needed for zsh-bgnotify
   brew install wifi-password
-  brew install exa # ls replacement
   brew install mas # package manager
   brew install jq # JSON formatter (... | jq)
 
@@ -91,13 +87,16 @@ if $brewinstall; then
   brew install ruby
   brew install rust
   brew install watchman
-  brew install cocoapods
   brew install hadolint # Docker linter
-  brew install httpie
   brew install sonar-scanner
   brew install imagemagick
   brew install k9s
+  brew install k3sup
   brew install supabase
+  brew install htop
+  brew install helm
+  brew install deno
+  brew install ansible
 
   # Golang
   brew install go
@@ -114,6 +113,7 @@ if $brewinstall; then
   brew install --cask font-roboto
   brew install --cask font-hack-nerd-font
   brew install --cask font-inconsolata-nerd-font
+  brew install --cask font-fira-code-nerd-font
 
   running "Installing cask apps"
 
@@ -121,6 +121,7 @@ if $brewinstall; then
   brew tap homebrew/cask-versions
 
   # General
+  brew install --cask ghostty
   brew install --cask browserosaurus
   brew install --cask macs-fan-control
   brew install --cask boom-3d
@@ -138,7 +139,6 @@ if $brewinstall; then
   brew install --cask appcleaner
   brew install --cask google-chrome
   brew install --cask google-chrome@beta
-  brew install --cask google-chrome@dev
   brew install --cask firefox@developer-edition
   brew install --cask iterm2
   brew install --cask slack
@@ -148,17 +148,19 @@ if $brewinstall; then
   brew install --cask google-drive # disable chrome plugins to allow auth in browser
   brew install --cask mullvadvpn
   brew install --cask topnotch
+  brew install --cask headlamp
+  brew install --cask jordanbaird-ice
+  brew install --cask linearmouse
+  brew install --cask omnidisksweeper
+  brew install --cask stats
 
   # Development
-  brew install --cask google-cloud-sdk
-  brew install --cask temurin # successor to adoptopenjdk
-  brew install --cask android-sdk
-  brew install --cask android-studio
+  brew install --cask orbstack
   brew install --cask pgadmin4
   brew install --cask insomnia
   brew install --cask imageoptim
-  brew install --cask stats
   brew install --cask visual-studio-code
+  brew install --cask zed
 
   # Quicklook
   brew install --cask qlcolorcode
@@ -176,9 +178,7 @@ if $brewinstall; then
   # ! requires: brew install mas
   mas install 1451685025 # Wireguard
   mas install 1528890965 # TextSniper
-  # mas install 1176895641 # Spark E-Mail
   mas install 966085870 # TickTick
-  mas install 1019371109 # BalanceLock -> Boom3D
   mas install 507257563 # Sip
   mas install 1352778147 # Bitwarden
 

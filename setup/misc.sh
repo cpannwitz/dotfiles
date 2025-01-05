@@ -6,11 +6,6 @@ if [ -z ${libloaded+x} ]; then
   source ./lib.sh
 fi;
 
-action "Setting up .nanorc"
-# Install better nanorc config.
-# https://github.com/scopatz/nanorc
-curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
-
 action "Setting chmod for ~/.ssh"
 chmod 700 "$HOME/.ssh"
 print_result $? "Set chmod 700 on ~/.ssh"

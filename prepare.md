@@ -37,3 +37,9 @@ Example ~/.gitconfig.local file:
 ```
 
 Include another .gitconfig in ~/workspace, to override with work credentials, if necessary (same content as above)
+
+# Transfer Files
+- transfer `~/workspace/workenv.sh`
+
+# Setup Powerlevel10k
+- run `p10k configure`

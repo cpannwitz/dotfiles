@@ -10,6 +10,9 @@
 - Go to preferences
 - Import Raycast config -> Password like Password-Manager
 
+## Configure Ghostty
+- paste in / create `ghostty/config` in `~/.config`
+
 ## Download Apps
 ### Flutter
 Download, and extract to `~/flutter`

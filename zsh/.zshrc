@@ -5,47 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Path to flutter configuration
-export PATH="$PATH:$HOME/flutter/bin"
-# Path to CocoaPods
-export PATH=$HOME/.gem/bin:$PATH
 
 # Path to Golang installation
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-# Path to Temurin / OpenJDK / Java
-# NOTE: version 20 required by React Native | if not needed, omit "-v 20"
-export JAVA_HOME=$(/usr/libexec/java_home -v 20)
-export PATH="$PATH:${JAVA_HOME}"
-
-# Path to Android Studio, SDK, Emulator
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_SDK_ROOT=$ANDROID_HOME
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 export NODE_OPTIONS=--max-old-space-size=8192
 
 source ~/workspace/workenv.sh
-
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # Use Brew Ruby instead of MacOS Ruby
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
-
-
 
 
 # Uncomment the following line to automatically update without prompting.
@@ -96,7 +72,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# eval "$(starship init zsh)"
+# initialize powerlevel10k zsh theme
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

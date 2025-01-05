@@ -1,0 +1,4 @@
+theme = tokyonight-storm
+font-family = "FiraCode"
+font-size = 11
+keybind = global:super+space=toggle_quick_terminal

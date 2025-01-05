@@ -21,21 +21,15 @@ brew cleanup --prune=all
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Install Node 16 version.
-# nvm install 16 --skip-default-packages --latest-npm
-
-# Install Node 18 version.
-# nvm install 18 --skip-default-packages --latest-npm
-
 # Install Node 20 version.
 nvm install 20 --skip-default-packages --latest-npm
 
-# Install Node 20 version.
+# Install Node 22 version.
 nvm install 22 --skip-default-packages --latest-npm
 
 # Set default latest Node version.
-nvm alias default 20
-nvm use 20
+nvm alias default 22
+nvm use 22
 
 packages=(
   eslint
