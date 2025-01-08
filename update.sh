@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
 # This script aims to update packages of several services used
+# - zsh
 # - homebrew
 # - homebrew casks
 # - NVM
 # - NPM
 # - Apple Store (via brew/mas)
+
+# ZSH / OH-MY-ZSH
+omz update
 
 # HOMEBREW
 # Update the formulaes and Homebrew itself:
@@ -30,6 +34,8 @@ nvm install 22 --skip-default-packages --latest-npm
 # Set default latest Node version.
 nvm alias default 22
 nvm use 22
+
+nvm cache clear
 
 packages=(
   eslint

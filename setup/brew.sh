@@ -60,6 +60,7 @@ if $brewinstall; then
 
   # zsh
   brew install zsh
+  brew install fzf
   brew install zsh-completions
   brew install zsh-autosuggestions
   brew install powerlevel10k

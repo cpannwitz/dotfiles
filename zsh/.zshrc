@@ -41,12 +41,63 @@ export NVM_LAZY_LOAD=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(bgnotify z zsh-nvm zsh-autosuggestions zsh-syntax-highlighting zsh-npm-scripts-autocomplete fzf-tab)
 
 # See: https://github.com/zsh-users/zsh-completions/issues/603
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
+
+##########
+# ALIASES
+##########
+alias updatesystem="$HOME/dotfiles/update.sh"
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd $HOME" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+alias dls="cd $HOME/Downloads"
+alias dotfiles="cd $HOME/dotfiles"
+alias desk="cd $HOME/Desktop"
+alias lib="cd $HOME/Library"
+alias work="cd $HOME/workspace"
+alias priv="cd $HOME/privatespace"
+
+alias g="git"
+
+# mv, rm, cp, etc
+alias mv='mv -v'
+alias rm='rm -i -v'
+alias cp='cp -v'
+
+alias ls="eza -l --icons=always --hyperlink --git" # all files
+alias ll="eza -la --icons=always --hyperlink --git" # all files including dotfiles
+alias ld="eza -lD --icons=always --hyperlink --git" # only directories
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# npm
+alias ni="npm install"
+alias npmg="npm list -g --depth=0 2>/dev/null"
+alias npml="npm list --depth=0 2>/dev/null"
+alias npmog="npm outdated -g --depth=0"
+alias npmug="npm update -g"
+alias npmol="npm outdated --depth=0"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec ${SHELL} -l"
+
+# Print each PATH entry on a separate line
+alias path="echo -e ${PATH//:/\\n}"
 
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
@@ -66,14 +117,17 @@ function t() {
  tree -I '.git|node_modules|bower_components|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -aC $2
 }
 
-# iterm2 Shell Integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # see why we source this: https://github.com/zsh-users/zsh-syntax-highlighting
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # initialize powerlevel10k zsh theme
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
+source <(fzf --zsh)
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
