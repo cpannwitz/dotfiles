@@ -8,9 +8,6 @@
 # - NPM
 # - Apple Store (via brew/mas)
 
-# ZSH / OH-MY-ZSH
-omz update
-
 # HOMEBREW
 # Update the formulaes and Homebrew itself:
 brew update
