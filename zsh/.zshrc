@@ -99,6 +99,11 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path="echo -e ${PATH//:/\\n}"
 
+# Reinstall Spotify Cask
+alias reinstallspotify="(brew uninstall --cask spotify; brew cleanup; launchctl remove com.spotify.client.startuphelper; brew install --cask spotify;)"
+
+# Reinstall Stats
+alias reinstallstats="(brew uninstall --cask stats; brew cleanup; brew install --cask stats;)"
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 DISABLE_MAGIC_FUNCTIONS=true

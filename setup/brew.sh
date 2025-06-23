@@ -106,9 +106,6 @@ if $brewinstall; then
   # FONTS
   running "Installing fonts"
 
-  # MUST HAVE STEP to install fonts!
-  brew tap homebrew/cask-fonts
-
   brew install --cask font-fontawesome
   brew install --cask font-inconsolata
   brew install --cask font-roboto
@@ -117,9 +114,6 @@ if $brewinstall; then
   brew install --cask font-fira-code-nerd-font
 
   running "Installing cask apps"
-
-  # APPLICATIONS
-  brew tap homebrew/cask-versions
 
   # General
   brew install --cask ghostty
