@@ -92,7 +92,6 @@ if $brewinstall; then
   brew install sonar-scanner
   brew install imagemagick
   brew install k9s
-  brew install k3sup
   brew install supabase
   brew install htop
   brew install helm
@@ -152,7 +151,6 @@ if $brewinstall; then
   # Development
   brew install --cask orbstack
   brew install --cask pgadmin4
-  brew install --cask insomnia
   brew install --cask imageoptim
   brew install --cask visual-studio-code
   brew install --cask zed

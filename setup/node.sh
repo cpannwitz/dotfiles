@@ -6,6 +6,8 @@ if [ -z ${libloaded+x} ]; then
   source ./lib.sh
 fi;
 
+# TODO: replace NVM with https://github.com/jdx/mise
+
 # Install NVM via curl script:
 botintro "Installing NVM..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
