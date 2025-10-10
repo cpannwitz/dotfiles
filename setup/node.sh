@@ -20,14 +20,18 @@ export NVM_DIR="$HOME/.nvm"
 action "Installing Node 20 Version (LTS)"
 nvm install 20 --skip-default-packages --latest-npm
 
-# Install Node 20 version.
+# Install Node 22 version.
 action "Installing Node 22 Version (LTS)"
 nvm install 22 --skip-default-packages --latest-npm
 
+# Install Node 24 version.
+action "Installing Node 24 Version (LTS)"
+nvm install 24 --skip-default-packages --latest-npm
+
 # Set default latest Node version.
 action "Setting Node 20 Version as Default"
-nvm alias default 22
-nvm use 22
+nvm alias default 24
+nvm use 24
 
 packages=(
   npm
