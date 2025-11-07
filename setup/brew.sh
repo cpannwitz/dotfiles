@@ -83,6 +83,7 @@ if $brewinstall; then
   brew install mongodb-community
   brew install mysql
   brew install redis
+  brew install postgres-language-server # https://github.com/supabase-community/postgres-language-server
 
   # DEV
   brew install ruby
