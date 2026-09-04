@@ -10,15 +10,11 @@ fi;
 
 # Install NVM via curl script:
 botintro "Installing NVM..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
 # Run the NVM initialize script
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Install Node 20 version.
-action "Installing Node 20 Version (LTS)"
-nvm install 20 --skip-default-packages --latest-npm
 
 # Install Node 22 version.
 action "Installing Node 22 Version (LTS)"
@@ -28,10 +24,14 @@ nvm install 22 --skip-default-packages --latest-npm
 action "Installing Node 24 Version (LTS)"
 nvm install 24 --skip-default-packages --latest-npm
 
+# Install Node 24 version.
+action "Installing Node 26 Version (LTS)"
+nvm install 26 --skip-default-packages --latest-npm
+
 # Set default latest Node version.
 action "Setting Node 20 Version as Default"
-nvm alias default 24
-nvm use 24
+nvm alias default 26
+nvm use 26
 
 packages=(
   npm

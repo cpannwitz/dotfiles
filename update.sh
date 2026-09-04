@@ -22,18 +22,18 @@ brew cleanup --prune=all
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Install Node 20 version.
-nvm install 20 --skip-default-packages --latest-npm
-
 # Install Node 22 version.
 nvm install 22 --skip-default-packages --latest-npm
 
 # Install Node 24 version.
 nvm install 24 --skip-default-packages --latest-npm
 
+# Install Node 24 version.
+nvm install 26 --skip-default-packages --latest-npm
+
 # Set default latest Node version.
-nvm alias default 24
-nvm use 24
+nvm alias default 26
+nvm use 26
 
 nvm cache clear
 
