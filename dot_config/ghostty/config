@@ -1,0 +1,6 @@
+theme = light:Catppuccin Latte,dark:Rose Pine Moon
+font-family = "FiraCode"
+font-size = 11
+keybind = global:super+space=toggle_quick_terminal
+keybind = shift+enter=text:\x1b\r
+macos-auto-secure-input = false

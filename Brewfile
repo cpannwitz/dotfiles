@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "mongodb/brew", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
+# Simple, modern, secure file encryption
+brew "age"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Zstandard is a real-time compression algorithm
@@ -12,6 +14,8 @@ brew "ansible"
 brew "brew-cask-completion"
 # New way of working with Protocol Buffers
 brew "buf"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
 # Cross-platform make
 brew "cmake"
 # Powerful, clean, object-oriented scripting language
