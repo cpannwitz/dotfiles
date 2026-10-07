@@ -1,0 +1,17 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $name := promptStringOnce . "name" "Full name" -}}
+{{- $hasOrbStack := false -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $hasOrbStack = promptBoolOnce . "hasOrbStack" "Is OrbStack installed?" -}}
+{{- end -}}
+
+encryption = "age"
+
+[data]
+  email = {{ $email | quote }}
+  name = {{ $name | quote }}
+  hasOrbStack = {{ $hasOrbStack }}
+
+[age]
+  identity = "~/.config/chezmoi/key.txt"
+  recipient = "age1rxq5edzhuvvftycxcnh4yg4ld62h3hj3us542824yljdae42n57sjznng7"
