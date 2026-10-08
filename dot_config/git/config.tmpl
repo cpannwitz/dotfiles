@@ -1,19 +1,100 @@
 [user]
-  name = "Christian Pannwitz"
-	username = "cpannwitz"
-  email = "ch.von.pa@gmail.com"
+	name = {{ .name }}
+	email = {{ .email }}
+	username = {{ .username }}
 [github]
-  user = cpannwitz
+  user = {{ .username }}
 [credential]
   helper = osxkeychain
-[core]
-  sshCommand = "ssh -i ~/.ssh/id_ed25519"
 
 [init]
 	defaultBranch = main
 [apply]
   # Detect whitespace errors when applying a patch
   whitespace = fix
+[core]
+	# convert CRLF to LF on commit, but not the other way around
+  autocrlf = input
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.config/ignore
+
+	# Make `git rebase` safer on macOS
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+  # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+  precomposeunicode = false
+
+	editor = code -n --wait
+	whitespace = fix,space-before-tab,-indent-with-non-tab,trailing-space
+[web]
+	browser = google-chrome
+[gitflow "prefix"]
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+	versiontag = v
+[help]
+  # Automatically correct and execute mistyped commands
+  autocorrect = 1
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+
+  # Include summaries of merged commits in newly created merge commit messages
+  log = true
+	tool = default-difftool
+[mergetool "default-difftool"]
+    cmd = code --wait $MERGED
+[color]
+	status = always
+	branch = auto
+	diff = auto
+	showbranch = auto
+	ui = true
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[status]
+	showUntrackedFiles = all
+	# Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
+	# https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+  insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
+[Include]
+  # Local modifications that shouldn't be stored in a repo.
+  path = "./.gitconfig.local"
+[pull]
+	ff = only
+	rebase = false
 [alias]
 	undo = reset --soft HEAD^
 	# Not quite as common as an amend, but still common
@@ -170,87 +251,3 @@
   #    git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
   #  fi \
   #}; f"
-[core]
-	# convert CRLF to LF on commit, but not the other way around
-  autocrlf = input
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-
-	# Make `git rebase` safer on macOS
-  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-  trustctime = false
-
-  # Prevent showing files whose names contain non-ASCII symbols as unversioned.
-  # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-  precomposeunicode = false
-
-	editor = code -n --wait
-	whitespace = fix,space-before-tab,-indent-with-non-tab,trailing-space
-[web]
-	browser = google-chrome
-[gitflow "prefix"]
-	feature = feature-
-	release = release-
-	hotfix = hotfix-
-	support = support-
-	versiontag = v
-[help]
-  # Automatically correct and execute mistyped commands
-  autocorrect = 1
-[diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-[merge]
-
-  # Include summaries of merged commits in newly created merge commit messages
-  log = true
-	tool = default-difftool
-[mergetool "default-difftool"]
-    cmd = code --wait $MERGED
-[color]
-	status = always
-	branch = auto
-	diff = auto
-	showbranch = auto
-	ui = true
-[color "branch"]
-	current = yellow bold
-	local = green bold
-	remote = cyan bold
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-[color "status"]
-	added = green bold
-	changed = yellow bold
-	untracked = red bold
-[status]
-	showUntrackedFiles = all
-	# Sometimes a newly-added folder, since it's only one line in git status, can slip under the radar.
-	# https://git-scm.com/docs/git-config#git-config-statusshowUntrackedFiles
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-  insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
-[Include]
-  # Local modifications that shouldn't be stored in a repo.
-  path = "./.gitconfig.local"
-[pull]
-	ff = only
-	rebase = false
