@@ -24,6 +24,8 @@ brew "ruby"
 brew "cocoapods"
 # Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -82,6 +84,8 @@ brew "redis"
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Postgres development platform
 brew "supabase"
 # Send macOS User Notifications from the command-line
@@ -92,6 +96,8 @@ brew "watchman"
 brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Fish-like fast/unobtrusive autosuggestions for zsh

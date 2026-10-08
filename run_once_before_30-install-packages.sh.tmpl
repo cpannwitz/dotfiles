@@ -33,4 +33,7 @@
     echo "Setting zsh as default shell..."
     chsh -s "$(which zsh)"
   fi
+
+  # Fix Quicklook Plugins
+  sudo xattr -d -r com.apple.quarantine ~/Library/QuickLook
 {{- end }}
