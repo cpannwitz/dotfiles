@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 ##########
 # ALIASES
 ##########
-alias updatesystem="$HOME/dotfiles/update.sh"
+alias updatesystem="$HOME/update.sh"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
