@@ -1,8 +1,8 @@
 [user]
-  name = "Christian Pannwitz"
-	username = "cpannwitz"
-  email = "ch.von.pa@gmail.com"
+	name = {{ .name }}
+	email = {{ .email }}
+	username = {{ .username }}
 [github]
-  user = cpannwitz
+  user = {{ .username }}
 [core]
   sshCommand = "ssh -i  ~/.ssh/waku_github"
