@@ -1,11 +1,14 @@
 [user]
-	name = {{ .name }}
-	email = {{ .email }}
-	username = {{ .username }}
+	name = "{{ .name }}"
+	email = "{{ .email }}"
+	username = "{{ .username }}"
 [github]
-  user = {{ .username }}
+  user = "{{ .username }}"
 [credential]
   helper = osxkeychain
+
+[includeIf "gitdir:~/workspace/**"]
+  path = ~/workspace/.gitconfig
 
 [init]
 	defaultBranch = main

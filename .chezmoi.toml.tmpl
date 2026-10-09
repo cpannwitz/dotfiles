@@ -6,11 +6,6 @@
 {{-   $hasOrbStack = promptBoolOnce . "hasOrbStack" "Is OrbStack installed?" -}}
 {{- end -}}
 
-encryption = "age"
-[age]
-  identity = "~/.config/chezmoi/key.txt"
-  recipient = "age126s4tsdqfkjgqprn627s2kj4qsv2kmylqwzmqwumzhwmpdg8q4lqdk0e7w"
-
 [data]
   email = {{ $email | quote }}
   name = {{ $name | quote }}
