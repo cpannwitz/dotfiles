@@ -1,0 +1,14 @@
+# macOS metadata
+
+.DS_Store
+**/.DS_Store
+**/dot_DS_Store
+
+# chezmoi age key (never commit)
+
+key.txt
+key.txt.age
+
+# git internals from submodules
+
+\*\*/dot_git/

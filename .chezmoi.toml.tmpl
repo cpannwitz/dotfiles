@@ -7,6 +7,9 @@
 {{- end -}}
 
 encryption = "age"
+[age]
+  identity = "~/.config/chezmoi/key.txt"
+  recipient = "age126s4tsdqfkjgqprn627s2kj4qsv2kmylqwzmqwumzhwmpdg8q4lqdk0e7w"
 
 [data]
   email = {{ $email | quote }}
@@ -14,9 +17,6 @@ encryption = "age"
   username = {{ $username | quote }}
   hasOrbStack = {{ $hasOrbStack }}
 
-[age]
-  identity = "~/.config/chezmoi/key.txt"
-  recipient = "age1rxq5edzhuvvftycxcnh4yg4ld62h3hj3us542824yljdae42n57sjznng7"
 
 [git]
   autoCommit = true
