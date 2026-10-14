@@ -4,7 +4,7 @@
 # Update ZSH / OhMyZsh
 # ---------------------------------------------------------------------------
 echo "==> Update ZSH / OhMyZsh"
-omz update
+$ZSH/tools/upgrade.sh
 
 # ---------------------------------------------------------------------------
 # Update, Upgrade and Cleanup Homebrew
