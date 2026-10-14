@@ -1,4 +1,4 @@
-tap "homebrew/bundle"
+tap "j-256/tap"
 tap "mongodb/brew", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "theboredteam/boring-notch", "https://github.com/TheBoredTeam/homebrew-boring-notch", trusted: true
@@ -10,8 +10,6 @@ brew "xz"
 brew "zstd"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# Fish completion for brew-cask
-brew "brew-cask-completion"
 # New way of working with Protocol Buffers
 brew "buf"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -145,7 +143,6 @@ cask "font-iosevka-nerd-font"
 cask "font-iosevka-term-nerd-font"
 cask "font-monaspace"
 cask "font-mononoki-nerd-font"
-cask "font-roboto"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -160,8 +157,6 @@ cask "headlamp"
 cask "heynote"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # File archiver
@@ -186,19 +181,13 @@ cask "omnidisksweeper"
 cask "orbstack"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
-# Quick Look plug-in that renders source code with syntax highlighting
-cask "qlcolorcode"
 cask "qlimagesize"
 # Quick Look generator for Markdown files
 cask "qlmarkdown"
-# Quick Look plugin for plaintext files without an extension
-cask "qlstephen"
-# Quick Look plugin for CSV files
-cask "quicklook-csv"
+# Preview text files that macOS Quick Look does not recognize
+cask "j-256/tap/qlomni", trusted: true
 # Thumbnails, static previews, cover art and metadata for video files
 cask "quicklook-video"
-# Quick Look generator for Adobe Swatch Exchange files
-cask "quicklookase"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Instant messaging application focusing on security
@@ -213,12 +202,12 @@ cask "stats"
 cask "suspicious-package"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# Menu bar manager
+cask "thaw"
 # Open-source code editor
 cask "visual-studio-code"
 # Open-source code editor
 cask "visual-studio-code@insiders"
-# Quick Look plugin for webp files
-cask "webpquicklook"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Multiplayer code editor
