@@ -86,6 +86,9 @@ packages=(
   typescript
   corepack
   pnpm
+  oxfmt
+  oxlint
+  oxlint-tsgolint
 )
 
 # Installing some default global npm packages
