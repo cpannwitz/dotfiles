@@ -51,6 +51,11 @@ source $ZSH/oh-my-zsh.sh
 ##########
 alias updatesystem="$HOME/update.sh"
 
+# Claude Code
+alias claude-work="CLAUDE_CONFIG_DIR=$HOME/.claude-work command claude"
+alias claude-private="CLAUDE_CONFIG_DIR=$HOME/.claude-private command claude"
+alias claude="echo 'Use either claude-work or claude-private'"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

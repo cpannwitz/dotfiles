@@ -1,3 +1,4 @@
+tap "dannystewart/apps"
 tap "j-256/tap"
 tap "mongodb/brew", trusted: true
 tap "oven-sh/bun", trusted: true
@@ -128,6 +129,8 @@ cask "browserosaurus"
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# Menu bar status indicator for Claude Code
+cask "claude-status-bar"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Web browser
@@ -141,6 +144,7 @@ cask "font-inconsolata-nerd-font"
 cask "font-input"
 cask "font-iosevka-nerd-font"
 cask "font-iosevka-term-nerd-font"
+cask "font-ioskeley-mono"
 cask "font-monaspace"
 cask "font-mononoki-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -202,17 +206,18 @@ cask "stats"
 cask "suspicious-package"
 # Messaging app with a focus on speed and security
 cask "telegram"
-# Menu bar manager
-cask "thaw"
 # Open-source code editor
 cask "visual-studio-code"
 # Open-source code editor
 cask "visual-studio-code@insiders"
+# Bring back the pre-Tahoe macOS volume and brightness HUDs
+cask "dannystewart/apps/volumehud", trusted: true
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Multiplayer code editor
 cask "zed"
 mas "Balance Lock", id: 1019371109
+mas "DaVinci Resolve", id: 571213070
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
